@@ -79,6 +79,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery.js" />
     <Content Include="bootstrap\js\jquery.min.js" />
+    <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="DataTable\css\jquery.dataTables.min.css" />
     <Content Include="DataTable\js\jquery.dataTables.min.js" />
     <Content Include="FontAwesome\attribution.js" />
@@ -1729,10 +1730,27 @@
     <Content Include="FontAwesome\webfonts\fa-brands-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.svg" />
+    <Content Include="images\vlog.jpg" />
+    <Content Include="images\vlog1.jpg" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.Master.cs">
+      <DependentUpon>Welcome.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Welcome.Master.designer.cs">
+      <DependentUpon>Welcome.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="FontAwesome\less\brands.less" />
@@ -1807,6 +1825,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Welcome.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
