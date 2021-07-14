@@ -35,7 +35,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light">  
                 <a class="navbar-brand" href="#">
-                <img src="images/vlog1.jpg" width="30" height="30" />
+                <img src="images/vlog.jpg" width="50" height="50" />
                     V-log
                  </a>
                 <button class="navbar-toggler" type="button" data-toggle="collaspe" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 

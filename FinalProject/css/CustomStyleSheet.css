@@ -3,16 +3,32 @@
     text-decoration: none !important;
 }
 
-  .footerlinks:hover {
-      color:#ffd800;
-  }
+
+    .footerlinks:hover {
+        color: #00d0ff;
+    }
 
 #footer1 {
     background: darkgray;
-    /*#762b00;*/
+    
+   
 }
 
   #footer2 {
       background:gray; 
-     /* #531f00;*/
+     
   }
+
+  h2{
+      text-align:center;
+  }
+
+ 
+  div{
+      text-align:center
+          
+  }
+
+ 
+
+  
