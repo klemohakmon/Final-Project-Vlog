@@ -49,7 +49,7 @@
 
                           <div class="row">
                             <div class="col-md-6">
-                                <label class="text-left">Contact No'</label>
+                                <label>Contact No'</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server"
                                       placeholder="Contact No'" ></asp:TextBox>
