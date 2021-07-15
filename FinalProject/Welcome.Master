@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Welcome</title>
+    <title>Web Vlog</title>
 
    <%-- <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">--%>
@@ -35,7 +35,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light">  
                 <a class="navbar-brand" href="#">
-                <img src="images/vlog.jpg" width="50" height="50" />
+                <img src="images/vlog1.jpg" width="50" height="50" />
                     V-log
                  </a>
                 <button class="navbar-toggler" type="button" data-toggle="collaspe" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
