@@ -53,7 +53,7 @@
   </section>       <%-- All the details about us and the pics--%> 
 
      <section>
-        <img width="1370"  src="images/vlog8.jpg" class="img-fluid"/>
+        <img width="1370"  src="images/vlog13.jpg" class="img-fluid"/>
     </section>
 
     <section>
