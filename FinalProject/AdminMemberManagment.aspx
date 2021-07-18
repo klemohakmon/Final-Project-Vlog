@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="FinalProject.UserProfile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="AdminMemberManagment.aspx.cs" Inherits="FinalProject.AdminMemberManagment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
 
       <div class="container-fluid">
         <div class="row">
@@ -10,18 +9,16 @@
                 <div class="card">
                     <div class="card-body"> 
 
-                        <div class="row">
+
+                         <div class="row">
                             <div class="col">
-                                <img width="100" src="images/generaluser.png"/>
+                                <h4>Member Details</h4>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
-                                <h4>Your Profile</h4>
-                                <span>Account Status - </span>
-                                <asp:Label class="badge bg-success" ID="Label1" runat="server" Text="Your status"></asp:Label>
-                              
+                                <img width="100" src="images/generaluser.png"/>
                             </div>
                         </div>
 
@@ -32,7 +29,35 @@
                         </div>
 
                         <div class="row">
+
+                             <div class="col-md-6">
+                                <label>Member ID</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+  
+                                    <asp:TextBox CssClass="form-control" ID="TextBox1" 
+                                        runat="server" placeholder="Member ID" ></asp:TextBox>
+                                        <asp:Button class="btn btn-primary" Text="Go" runat="server" />
+                                      
+                                </div>
+                            </div>
+                         </div>
+
                             <div class="col-md-6">
+                                <label>Full Name</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" 
+                                        runat="server" placeholder="Full Name"/><asp:TextBox runat="server" />
+                                </div>
+                            </div>
+
+                           
+                            
+
+                        </div>
+
+                       
+                           <%-- <div class="col-md-6">
                                 <label>Full Name</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server"
@@ -169,7 +194,7 @@
                 </div>  <%--card--%>
 
 
-            </div>
+          <%--  </div>
               <div class="col-md-7">
 
                     <div class="col-md-12">
@@ -202,7 +227,7 @@
                             <div class="col">
                                 <asp:GridView CssClass="table table-striped table-bordered" 
                                     ID="GridView1" runat="server"></asp:GridView>              <%--table that need conaction to the database ssms--%>
-                            </div>
+                        <    </div>
                         </div>
 
                       </div>
@@ -210,9 +235,6 @@
 
                 </div>
     
-            </div>
-        </div>
-
-    
-
+<%--            </div>
+        </div>--%>
 </asp:Content>
