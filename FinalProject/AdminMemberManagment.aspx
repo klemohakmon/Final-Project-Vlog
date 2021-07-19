@@ -23,7 +23,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <hr />
+                                <hr>
                             </div>
                         </div>
 
