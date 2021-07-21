@@ -166,23 +166,26 @@
 
                     </div>
 
-                </div>  <%--card--%>
+                </div> 
 
 
             </div>
-              <div class="col-md-7">
+
+
+
+             <%-- <div class="col-md-7">
 
                     <div class="col-md-12">
                 <div class="card">
-                    <div class="card-body"> 
+                    <div class="card-body"> --%>
 
-                        <div class="row">
+<%--                        <div class="row">
                             <div class="col">
                                 <img width="100" src="images/vlog1.jpg"/>
                             </div>
-                        </div>
+                        </div>--%>
 
-                        <div class="row">
+                        <%--<div class="row">
                             <div class="col">
                                 <h4>Your Issued vlogs</h4>
                                
@@ -196,20 +199,20 @@
                             <div class="col">
                                 <hr>
                             </div>
-                        </div>
+                        </div>--%>
 
-                        div class="row">
+<%--                       <div class="row">
                             <div class="col">
                                 <asp:GridView CssClass="table table-striped table-bordered" 
                                     ID="GridView1" runat="server"></asp:GridView>              <%--table that need conaction to the database ssms--%>
-                            </div>
-                        </div>
+                          <%--  </div>
+                        </div>--%>
 
                       </div>
                    </div>
 
                 </div>
-    
+              </div>
             </div>
         </div>
 
