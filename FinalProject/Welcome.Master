@@ -38,6 +38,7 @@
                 <img src="images/vlog1.jpg" width="50" height="50" />
                     V-log
                  </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collaspe" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"> </span>
@@ -99,7 +100,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <p>
                                  <asp:LinkButton Class="footerlinks" ID="LinkButton6" 
-                          runat="server">Admin Login</asp:LinkButton> 
+                          runat="server" OnClick="LinkButton6_Click">Admin Login</asp:LinkButton> 
                                  &nbsp;
                              <asp:LinkButton Class="footerlinks" ID="LinkButton12" 
                           runat="server">Movie Inventory</asp:LinkButton> 
