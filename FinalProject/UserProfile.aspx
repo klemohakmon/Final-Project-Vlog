@@ -19,9 +19,6 @@
                         <div class="row">
                             <div class="col">
                                 <h4>Your Profile</h4>
-                                <span>Account Status - </span>
-                                <asp:Label class="badge bg-success" ID="Label1" runat="server" Text="Your status"></asp:Label>
-                              
                             </div>
                         </div>
 
@@ -48,7 +45,6 @@
                             </div>
                         </div>
 
-
                           <div class="row">
                             <div class="col-md-6">
                                 <label>Contact No'</label>
@@ -65,10 +61,7 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-                        
+                      
                           <div class="row">
                             <div class="col-md-4">
                                 <label>State</label>
@@ -104,8 +97,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                         
                         <div class="row">
                             <div class="col">
@@ -116,14 +107,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="row">
-                            <div class="col">                     
-                                 <span class="badge rounded-pill bg-info text-dark">Login Credentials</span>
-                            </div>
-                        </div>
-
 
                          <div class="row">
                         <div class="col-md-4">
@@ -149,10 +132,7 @@
                                       placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
                             </div>
-
                         </div>
-
-
 
                         <div class="row">
                             <div class="col-8 mx-auto">                     
@@ -162,53 +142,15 @@
                                   
                                 </div>
                             </div>
-                        </div>
-
+                        </div>                 
                     </div>
 
                 </div> 
 
-
-            </div>
-
-
-
-             <%-- <div class="col-md-7">
-
-                    <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body"> --%>
-
-<%--                        <div class="row">
-                            <div class="col">
-                                <img width="100" src="images/vlog1.jpg"/>
-                            </div>
-                        </div>--%>
-
-                        <%--<div class="row">
-                            <div class="col">
-                                <h4>Your Issued vlogs</h4>
-                               
-                                <asp:Label class="badge bg-primary" ID="Label2" runat="server"
-                                    Text="Your vlog info"></asp:Label>
-                              
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <hr>
-                            </div>
-                        </div>--%>
-
-<%--                       <div class="row">
-                            <div class="col">
-                                <asp:GridView CssClass="table table-striped table-bordered" 
-                                    ID="GridView1" runat="server"></asp:GridView>              <%--table that need conaction to the database ssms--%>
-                          <%--  </div>
-                        </div>--%>
-
-                      </div>
+                               <a href="HomePage.aspx"><< Back To Home</a><br />
+                              <br />
+                           </div>
+                       </div>
                    </div>
 
                

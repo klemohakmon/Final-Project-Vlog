@@ -56,7 +56,7 @@
 
                     </div>
 
-                </div>  <%--card--%>
+                </div> 
 
                <a href="HomePage.aspx"><< Back To Home</a><br />
                 <br />
