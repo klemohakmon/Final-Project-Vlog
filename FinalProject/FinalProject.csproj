@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminMemberManagment.aspx" />
+    <Content Include="AdminVlogLIst.aspx" />
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -1767,6 +1768,13 @@
     </Compile>
     <Compile Include="AdminMemberManagment.aspx.designer.cs">
       <DependentUpon>AdminMemberManagment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVlogLIst.aspx.cs">
+      <DependentUpon>AdminVlogLIst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminVlogLIst.aspx.designer.cs">
+      <DependentUpon>AdminVlogLIst.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
