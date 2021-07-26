@@ -18,5 +18,25 @@ namespace FinalProject
         {
             Response.Redirect("AdminLogin.aspx");
         }
+
+        protected void LinkButton12_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminVlogLIst.aspx");
+        }
+
+        protected void LinkButton11_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminMemberManagment.aspx");
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserLogin.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+                Response.Redirect("UserSignUp.aspx");
+        }
     }
-}
+ }
