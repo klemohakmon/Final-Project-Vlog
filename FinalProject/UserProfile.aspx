@@ -10,13 +10,13 @@
                 <div class="card">
                     <div class="card-body"> 
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <img width="100" src="images/generaluser.png"/>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <h4>Your Profile</h4>
                             </div>
@@ -142,16 +142,47 @@
                                   
                                 </div>
                             </div>
-                        </div>                 
+                        </div> 
+                        
+                         
                     </div>
-
                 </div> 
+
+              
 
                                <a href="HomePage.aspx"><< Back To Home</a><br />
                               <br />
                            </div>
+                <div class="col-md-7">
+                <div class="card">
+                    <div class="card-body">   
+                        <div class="row text-center">
+                            <div class="col">
+                                <h4>Vlog List</h4>
+                            </div>
+                        </div>
+
+                         <div class="row">
+                            <div class="col">
+                                <hr />
+                            </div>
+                         </div>
+                       
+                        <div class="row">
+                            <div class="col">
+                                <asp:GridView class="table table-striped table-bordered" 
+                                  ID="GridView1"  runat="server"></asp:GridView>
+                            </div>
+
+                        </div>
+                     </div>
+                  </div>
+                       
+                 </div>  // table and List of User uplaod vlogs
                        </div>
                    </div>
+
+    
 
                
 
