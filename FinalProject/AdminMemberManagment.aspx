@@ -11,13 +11,13 @@
                 <div class="card">
                     <div class="card-body"> 
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <h4>Member Details</h4>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <img width="100" src="images/generaluser.png"/>
                             </div>
@@ -136,7 +136,7 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">   
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <h4>Member List</h4>
                             </div>

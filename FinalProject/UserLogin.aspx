@@ -10,13 +10,13 @@
                 <div class="card">
                     <div class="card-body"> 
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <img width="150" src="images/generaluser.png"/>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <h3>Member Login</h3>
                             </div>
