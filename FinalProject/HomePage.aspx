@@ -9,7 +9,7 @@
   
 
     <section>
-    <div class="container"> 
+    <div class="container text-center"> 
         <div class="row">
             <div class="col-12">
                    <h2> Our Features</h2>
@@ -57,7 +57,7 @@
     </section>
 
     <section>
-    <div class="container"> 
+    <div class="container text-center"> 
         <div class="row">
             <div class="col-12">
                    <h2> Our Process</h2>
