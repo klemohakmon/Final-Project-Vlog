@@ -147,7 +147,7 @@
                             <div class="col">                     
                                  <div class="form-group">
                                      <asp:Button cssclass="btn btn-info btn-block"
-                                         ID="Button1" runat="server" Text="Sign Up" />
+                                         ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" />
                                   
                                 </div>
                             </div>
