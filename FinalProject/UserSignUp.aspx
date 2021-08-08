@@ -115,14 +115,6 @@
                             </div>
                         </div>
 
-
-                        <div class="row">
-                            <div class="col">                     
-                                 <span class="badge rounded-pill bg-info text-dark">Login Credentials</span>
-                            </div>
-                        </div>
-
-
                          <div class="row">
                         <div class="col-md-6">
                                   <label>Member ID</label>
