@@ -31,9 +31,9 @@ namespace FinalProject
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO Users " +
                 "(Full_Name,Phone_Number,State,City,Zip_Code,Birth_Date," +
-                "Full_Adrress,E_Mail,Password) values" +
+                "Full_Adrress,E_Mail,Password,Member_id) values" +
                 "(@Full_Name,@Phone_Number,@State,@City,@Zip_Code,@Birth_Date," +
-                "@Full_Adrress,@E_Mail,@Password) ", con);
+                "@Full_Adrress,@E_Mail,@Password,@Member_id) ", con);
 
                 cmd.Parameters.AddWithValue("@Full_Name",TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@Phone_Number",TextBox3.Text.Trim());
@@ -44,13 +44,19 @@ namespace FinalProject
                 cmd.Parameters.AddWithValue("@Full_Adrress",TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@E_Mail",TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@Password",TextBox9.Text.Trim());
+                cmd.Parameters.AddWithValue("@Member_id", TextBox8.Text.Trim());
 
                 cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Sign Up Successful. Go to User Login To Login');</script>");
+
+
+
             }
             catch (Exception ex)
             {
-
-                throw;
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+               
             }
         }
     }
