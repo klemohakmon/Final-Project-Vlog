@@ -49,10 +49,10 @@
 
                           <div class="row">
                             <div class="col-md-6">
-                                <label>Contact No'</label>
+                                <label>Phone No'</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server"
-                                      placeholder="Contact No'" ></asp:TextBox>
+                                      placeholder="Phone No'" ></asp:TextBox>
                                 </div>
                             </div>
                              <div class="col-md-6">
@@ -72,17 +72,17 @@
                                 <label>State</label>
                                 <div class="form-group">
                                     <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
-                                        <asp:ListItem Text="Tel Aviv" Value="Tel Aviv" />
-                                         <asp:ListItem Text="Ashdod" Value="Ashdod" />
-                                         <asp:ListItem Text="Haifa" Value="Haifa" />
-                                         <asp:ListItem Text="Raanana" Value="Raanana" />
-                                         <asp:ListItem Text="Herzelia" Value="Herzelia" />
-                                         <asp:ListItem Text="Hod Hashron" Value="Hod Hashron" />
-                                         <asp:ListItem Text="Beer Sheva" Value="Beer Sheva" />
-                                         <asp:ListItem Text="Bat Yam" Value="Bat Yam" />
-                                         <asp:ListItem Text="Holon" Value="Holon" />
-                                         <asp:ListItem Text="Kiryat Gat" Value="Kiryat Gat" />
-                                         <asp:ListItem Text="Ashkelon" Value="Ashkelon" />
+                                        <asp:ListItem Text="Tel Aviv" Value="Israel" />
+                                         <asp:ListItem Text="Ashdod" Value="Miami" />
+                                         <asp:ListItem Text="Haifa" Value="New York" />
+                                         <asp:ListItem Text="Raanana" Value="Oralndo" />
+                                         <asp:ListItem Text="Herzelia" Value="Italy" />
+                                         <asp:ListItem Text="Hod Hashron" Value="Germany" />
+                                         <asp:ListItem Text="Beer Sheva" Value="India" />
+                                         <asp:ListItem Text="Bat Yam" Value="China" />
+                                         <asp:ListItem Text="Holon" Value="Japan" />
+                                         <asp:ListItem Text="Kiryat Gat" Value="Russia" />
+                                         <asp:ListItem Text="Ashkelon" Value="Ukraine" />
                                         
                                     </asp:DropDownList>
                                 </div>
@@ -95,10 +95,10 @@
                                 </div>
                             </div>
                               <div class="col-md-4">
-                                  <label>Pin Code</label>
+                                  <label>Zip Code</label>
                                 <div class="form-group">
                                     <asp:TextBox Class="form-control" ID="TextBox7" runat="server"
-                                      placeholder="Pin Code" TextMode="Number"></asp:TextBox>
+                                      placeholder="Zip Code" TextMode="Number"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                         <div class="row">
                             <div class="col">                     
                                  <div class="form-group">
-                                     <asp:Button cssclass="btn btn-info btn-block"
+                                     <asp:Button cssclass="btn btn-success btn-block"
                                          ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" />
                                   
                                 </div>
