@@ -49,7 +49,7 @@
                                  <div class="form-group">
                                   <a href="UserSignUp.aspx"><input class="btn btn-success btn-block" ID="Button2" type="button" value="Sign Up" /></a>
                                 </div>
-                                btn btn-success btn-block
+                              
 
                             </div>
                         </div>
