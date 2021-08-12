@@ -117,10 +117,10 @@
 
                          <div class="row">
                         <div class="col-md-6">
-                                  <label>Member ID</label>
+                                  <label>memberr ID</label>
                                 <div class="form-group">
                                     <asp:TextBox Class="form-control" ID="TextBox8" runat="server"
-                                      placeholder="Member ID"></asp:TextBox>
+                                      placeholder="memberr ID"></asp:TextBox>
                                 </div>
                             </div>
 

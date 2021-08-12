@@ -23,7 +23,7 @@ namespace FinalProject
         {
             if (checkMemberExsists())
             {
-                Response.Write("<script>alert('Member Already  Exist with this Member ID, Pls try other ID ');</script>");
+                Response.Write("<script>alert('Member Already Exist with this Member ID, Pls try other ID ');</script>");
 
             }
             else
@@ -46,7 +46,7 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from Users where User_id = '" + TextBox8.Text.Trim() +"';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from members_id where member_id = '" + TextBox8.Text.Trim() +"';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -83,22 +83,27 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO Users " +
-                "(Full_Name,Phone_Number,State,City,Zip_Code,Birth_Date," +
-                "Full_Adrress,E_Mail,Password,Member_id) values" +
-                "(@Full_Name,@Phone_Number,@State,@City,@Zip_Code,@Birth_Date," +
-                "@Full_Adrress,@E_Mail,@Password,@Member_id) ", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO members_id " +
+                "(full_name,dob,contact_no,email,state,city," +
+                "pincode,full_address,member_id,password) values" +
+                "(@full_name,@dob,@contact_no,@email,@state,@city,@pincode," +
+                "@full_address,@member_id,@password) ", con);
 
-                cmd.Parameters.AddWithValue("@Full_Name", TextBox1.Text.Trim());
-                cmd.Parameters.AddWithValue("@Phone_Number", TextBox3.Text.Trim());
-                cmd.Parameters.AddWithValue("@State", DropDownList1.SelectedItem.Value);
-                cmd.Parameters.AddWithValue("@City", TextBox6.Text.Trim());
-                cmd.Parameters.AddWithValue("@Zip_Code", TextBox7.Text.Trim());
-                cmd.Parameters.AddWithValue("@Birth_Date", TextBox2.Text.Trim());
-                cmd.Parameters.AddWithValue("@Full_Adrress", TextBox5.Text.Trim());
-                cmd.Parameters.AddWithValue("@E_Mail", TextBox4.Text.Trim());
-                cmd.Parameters.AddWithValue("@Password", TextBox9.Text.Trim());
-                cmd.Parameters.AddWithValue("@Member_id", TextBox8.Text.Trim());
+                
+                cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
+                cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
+                cmd.Parameters.AddWithValue("@contact_no", TextBox3.Text.Trim());
+                cmd.Parameters.AddWithValue("@email", TextBox4.Text.Trim());
+                cmd.Parameters.AddWithValue("@state", DropDownList1.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
+                cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
+                cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
+                cmd.Parameters.AddWithValue("@member_id", TextBox8.Text.Trim());
+                cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());
+               
+               
+               
+                
 
                 cmd.ExecuteNonQuery();
                 con.Close();
