@@ -28,6 +28,20 @@ namespace FinalProject
                 {
                     con.Open();
                 }
+                SqlCommand cmd = new SqlCommand("SELECT * from members_id where member_id = '" + TextBox1.Text.Trim() + "' AND password ='" +TextBox2.Text.Trim() +"'", con); ;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</Script>");
+                    }
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid credentials');</script>");
+                }
+
 
 
             }
