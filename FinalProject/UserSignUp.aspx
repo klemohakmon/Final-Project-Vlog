@@ -72,17 +72,17 @@
                                 <label>State</label>
                                 <div class="form-group">
                                     <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
-                                        <asp:ListItem Text="Tel Aviv" Value="Israel" />
-                                         <asp:ListItem Text="Ashdod" Value="Miami" />
-                                         <asp:ListItem Text="Haifa" Value="New York" />
-                                         <asp:ListItem Text="Raanana" Value="Oralndo" />
-                                         <asp:ListItem Text="Herzelia" Value="Italy" />
-                                         <asp:ListItem Text="Hod Hashron" Value="Germany" />
-                                         <asp:ListItem Text="Beer Sheva" Value="India" />
-                                         <asp:ListItem Text="Bat Yam" Value="China" />
-                                         <asp:ListItem Text="Holon" Value="Japan" />
-                                         <asp:ListItem Text="Kiryat Gat" Value="Russia" />
-                                         <asp:ListItem Text="Ashkelon" Value="Ukraine" />
+                                        <asp:ListItem Text="Israel" Value="Israel" />
+                                         <asp:ListItem Text="Miami" Value="Miami" />
+                                         <asp:ListItem Text="New York" Value="New York" />
+                                         <asp:ListItem Text="Oralndo" Value="Oralndo" />
+                                         <asp:ListItem Text="Italy" Value="Italy" />
+                                         <asp:ListItem Text="Germany" Value="Germany" />
+                                         <asp:ListItem Text="India" Value="India" />
+                                         <asp:ListItem Text="China" Value="China" />
+                                         <asp:ListItem Text="Japan" Value="Japan" />
+                                         <asp:ListItem Text="Russia" Value="Russia" />
+                                         <asp:ListItem Text="Ukraine" Value="Ukraine" />
                                         
                                     </asp:DropDownList>
                                 </div>
