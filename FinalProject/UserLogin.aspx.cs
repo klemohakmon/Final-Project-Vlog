@@ -48,7 +48,7 @@ namespace FinalProject
             catch (Exception)
             {
 
-                throw;
+                
             }
             //Response.Write("<script>alert('Bottun click');</script>");
         }
