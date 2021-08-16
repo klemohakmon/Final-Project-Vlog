@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace FinalProject
 {
-    public partial class Sign_Up : System.Web.UI.Page
+    public partial class UserSignUp : System.Web.UI.Page
     {
 
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;

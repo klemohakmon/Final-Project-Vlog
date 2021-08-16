@@ -11,7 +11,7 @@ namespace FinalProject
 {
 
 
-    public partial class Sign_Up
+    public partial class UserSignUp
     {
 
         /// <summary>
