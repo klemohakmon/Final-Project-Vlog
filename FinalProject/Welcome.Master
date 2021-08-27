@@ -16,7 +16,7 @@
     <%--FontAwesome.css--%>
     <link href="FontAwesome/css/all.css" rel="stylesheet" />
      <%--our Custom css--%>
-    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+ <%--   <link href="css/CustomStyleSheet.css" rel="stylesheet" />--%>
 
     <%--jquary--%>
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
@@ -95,7 +95,7 @@
             <div id="footer1" class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p style="color:whitesmoke">&copy All Right 
+                        <p style="color:gray">&copy All Right 
                         <a class="footerlinks" href="#" target="_blank">Vlog |</a>
                            
 
