@@ -1751,6 +1751,7 @@
     <Content Include="UserProfile.aspx" />
     <Content Include="UserSignUp.aspx" />
     <Content Include="UserLogin.aspx" />
+    <Content Include="ViewVlogs.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -1804,6 +1805,13 @@
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVlogs.aspx.cs">
+      <DependentUpon>ViewVlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewVlogs.aspx.designer.cs">
+      <DependentUpon>ViewVlogs.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
