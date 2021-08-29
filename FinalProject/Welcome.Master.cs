@@ -38,5 +38,10 @@ namespace FinalProject
         {
                 Response.Redirect("UserSignUp.aspx");
         }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("");
+        }
     }
  }
