@@ -41,7 +41,7 @@ namespace FinalProject
 
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("ViewVlogs.aspx");
         }
     }
  }
