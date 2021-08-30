@@ -13,13 +13,12 @@ namespace FinalProject
     public partial class adminlogin : System.Web.UI.Page
     {
 
-
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        // user login
+        // login button click event
         protected void Button1_Click(object sender, EventArgs e)
         {
             try
@@ -29,15 +28,13 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-
-                SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where user_name = '" + TextBox1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
-
+                SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where member_id = '" + Button1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        Response.Write("<script>alert('" + dr.GetValue(0).ToString() + "');</Script>");
+                        Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</Script>");
                     }
                 }
                 else
@@ -48,9 +45,9 @@ namespace FinalProject
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
 
             }
         }
