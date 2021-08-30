@@ -37,7 +37,7 @@ namespace FinalProject
                     LinkButton7.Visible = true; // hello user link button
                     LinkButton7.Text = "Hello" + Session["user_name"].ToString();
 
-                    LinkButton6.Visible = true; // admin login link button
+                    LinkButton6.Visible = false; // admin login link button
 
 
                     LinkButton12.Visible = false; // Movie inventory link button
@@ -119,6 +119,7 @@ namespace FinalProject
 
             LinkButton12.Visible = false; // Movie inventory link button
             LinkButton11.Visible = false; // Admin Member Managment link button
+            Response.Redirect("HomePage.aspx");
         }
     }
  }
