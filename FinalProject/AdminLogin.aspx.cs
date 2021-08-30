@@ -28,13 +28,13 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where member_id = '" + Button1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
+                SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where user_name = '" + TextBox1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</Script>");
+                        Response.Write("<script>alert('" + dr.GetValue(0).ToString() + "');</Script>");
                     }
                 }
                 else
