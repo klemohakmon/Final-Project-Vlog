@@ -35,6 +35,7 @@ namespace FinalProject
                     while (dr.Read())
                     {
                         Response.Write("<script>alert('" + dr.GetValue(0).ToString() + "');</Script>");
+
                     }
                 }
                 else
@@ -45,11 +46,12 @@ namespace FinalProject
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
     }
 }
+
