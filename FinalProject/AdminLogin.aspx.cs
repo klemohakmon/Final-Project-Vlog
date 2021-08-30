@@ -45,9 +45,9 @@ namespace FinalProject
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
 
             }
         }
