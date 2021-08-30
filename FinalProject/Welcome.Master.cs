@@ -11,6 +11,62 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"] == null)
+                {
+                    LinkButton1.Visible = true; // user login link button
+                    LinkButton2.Visible = true; // sign up link button
+
+                    LinkButton3.Visible = false; // logout link button
+                    LinkButton7.Visible = false; // hello user link button
+
+                    LinkButton6.Visible = true; // admin login link button
+
+
+                    LinkButton12.Visible = false; // Movie inventory link button
+                    LinkButton11.Visible = false; // Admin Member Managment link button
+
+                }
+                else if (Session["role"].Equals("Member"))
+                {
+                    LinkButton1.Visible = false; // user login link button
+                    LinkButton2.Visible = false; // sign up link button
+
+                    LinkButton3.Visible = true; // logout link button
+                    LinkButton7.Visible = true; // hello user link button
+                    LinkButton7.Text = "Hello" + Session["user_name"].ToString();
+
+                    LinkButton6.Visible = true; // admin login link button
+
+
+                    LinkButton12.Visible = false; // Movie inventory link button
+                    LinkButton11.Visible = false; // Admin Member Managment link button
+                }
+                else if(Session["role"].Equals("Admin"))
+                {
+                    LinkButton1.Visible = false; // user login link button
+                    LinkButton2.Visible = false; // sign up link button
+
+                    LinkButton3.Visible = true; // logout link button
+                    LinkButton7.Visible = true; // hello user link button
+                    LinkButton7.Text = "Hello Admin";
+
+                    LinkButton6.Visible = false; // admin login link button
+
+
+                    LinkButton12.Visible = true; // Movie inventory link button
+                    LinkButton11.Visible = true; // Admin Member Managment link button
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
         }
 
@@ -42,6 +98,27 @@ namespace FinalProject
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             Response.Redirect("ViewVlogs.aspx");
+        }
+
+        // Logout button
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Session["user_name"] = "";
+            Session["fullname"] = "";
+            Session["role"] = "";
+
+
+            LinkButton1.Visible = true; // user login link button
+            LinkButton2.Visible = true; // sign up link button
+
+            LinkButton3.Visible = false; // logout link button
+            LinkButton7.Visible = false; // hello user link button
+
+            LinkButton6.Visible = true; // admin login link button
+
+
+            LinkButton12.Visible = false; // Movie inventory link button
+            LinkButton11.Visible = false; // Admin Member Managment link button
         }
     }
  }

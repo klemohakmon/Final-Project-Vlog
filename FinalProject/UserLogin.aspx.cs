@@ -34,8 +34,13 @@ namespace FinalProject
                 {
                     while (dr.Read())
                     {
-                        Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</Script>");
+                        Response.Write("<script>alert('Login Successful');</Script>");
+                        Session["user_name"] = dr.GetValue(8).ToString();
+                        Session["fullname"] = dr.GetValue(0).ToString();
+                        Session["role"] = "Member";
+                        
                     }
+                    Response.Redirect("HomePage.aspx");
                 }
                 else
                 {
