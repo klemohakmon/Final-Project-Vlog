@@ -83,7 +83,7 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO members_id(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password) values (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password) ", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO members_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password) values (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password) ", con);
 
                 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
