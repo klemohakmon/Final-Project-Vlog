@@ -28,7 +28,7 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from members_id where member_id = '" + TextBox1.Text.Trim() + "' AND password ='" +TextBox2.Text.Trim() +"'", con); ;
+                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where member_id = '" + TextBox1.Text.Trim() + "' AND password ='" +TextBox2.Text.Trim() +"'", con); ;
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
