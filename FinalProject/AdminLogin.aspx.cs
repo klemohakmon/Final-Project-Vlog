@@ -13,12 +13,13 @@ namespace FinalProject
     public partial class adminlogin : System.Web.UI.Page
     {
 
+
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        // login button click event
+        // user login
         protected void Button1_Click(object sender, EventArgs e)
         {
             try
@@ -28,7 +29,11 @@ namespace FinalProject
                 {
                     con.Open();
                 }
+
                 SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where user_name = '" + TextBox1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
+
+               
+
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
