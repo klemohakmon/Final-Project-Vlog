@@ -32,8 +32,6 @@ namespace FinalProject
 
                 SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where user_name = '" + TextBox1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
 
-               
-
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
