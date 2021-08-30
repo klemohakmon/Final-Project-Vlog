@@ -19,37 +19,37 @@ namespace FinalProject
 
         }
         // login button click event
-            protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            try
             {
-                try
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
                 {
-                    SqlConnection con = new SqlConnection(strcon);
-                    if (con.State == ConnectionState.Closed)
-                    {
-                        con.Open();
-                    }
-                    SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where user_name = '" + TextBox1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    if (dr.HasRows)
-                    {
-                        while (dr.Read())
-                        {
-                            Response.Write("<script>alert('" + dr.GetValue(0).ToString() + "');</Script>");
-                        }
-                    }
-                    else
-                    {
-                        Response.Write("<script>alert('Invalid credentials');</script>");
-                    }
-
-
-
+                    con.Open();
                 }
-                catch (Exception ex)
+                SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where member_id = '" + Button1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    Response.Write("<script>alert('" + ex.Message + "');</script>");
-
+                    while (dr.Read())
+                    {
+                        Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</Script>");
+                    }
                 }
+                else
+                {
+                    Response.Write("<script>alert('Invalid credentials');</script>");
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+
             }
         }
     }
+}
