@@ -11,7 +11,7 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridView1.DataBind();
         }
         // go member id button
         protected void LinkButton4_Click(object sender, EventArgs e)

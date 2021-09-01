@@ -2,9 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">  
         $(document).ready(function () {
-        //    $('#myTable').DataTable();
-            //});
-            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+         $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
         });
     </script>
 </asp:Content>
@@ -157,9 +155,18 @@
                        
                         <div class="row">
   
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>                          <div class="col">
-                                <asp:GridView class="table table-striped table-bordered" 
-                                  ID="GridView1"  runat="server"></asp:GridView>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=Klemo-Hakmon\SQLEXPRESS;Initial Catalog=VlogDB;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [members_tbl]"></asp:SqlDataSource>                          
+                            <div class="col">
+                                <asp:GridView class="table table-striped table-bordered" ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="member_id" DataSourceID="SqlDataSource1">
+                                    <Columns>
+                                        <asp:BoundField DataField="member_id" HeaderText="ID" ReadOnly="True" SortExpression="member_id" />
+                                        <asp:BoundField DataField="full_name" HeaderText="Name" SortExpression="full_name" />
+                                        <asp:BoundField DataField="contact_no" HeaderText="Contact No" SortExpression="contact_no" />
+                                        <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" />
+                                        <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
+                                        <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
+                                    </Columns>
+                                </asp:GridView>
                                
                             </div>
 

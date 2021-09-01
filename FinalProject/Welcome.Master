@@ -18,6 +18,9 @@
      <%--our Custom css--%>
  <%--   <link href="css/CustomStyleSheet.css" rel="stylesheet" />--%>
 
+    
+    
+
     <%--jquary--%>
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
  <%--   <script src="bootstrap/js/jquery.min.js"></script>--%>
@@ -28,6 +31,10 @@
       <%--datatables js--%>
     <script src="DataTable/js/jquery.dataTables.min.js"></script>
     
+     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+
+    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+   
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
