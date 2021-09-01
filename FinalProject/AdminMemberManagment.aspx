@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="AdminMemberManagment.aspx.cs" Inherits="FinalProject.AdminMemberManagment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">  
+        $(document).ready(function () {
+        //    $('#myTable').DataTable();
+            //});
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -39,7 +46,7 @@
                                     <asp:TextBox CssClass="form-control" ID="TextBox1" 
                                 runat="server" placeholder="Member ID" ></asp:TextBox>
                                         <asp:LinkButton CssClass="btn btn-primary" ID="LinkButton4"
-                                runat="server"><i class="fas fa-check-circle"></i></asp:LinkButton>
+                                runat="server" OnClick="LinkButton4_Click"><i class="fas fa-check-circle"></i></asp:LinkButton>
                                       
                                 </div>
                             </div>
@@ -149,9 +156,11 @@
                          </div>
                        
                         <div class="row">
-                            <div class="col">
+  
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>                          <div class="col">
                                 <asp:GridView class="table table-striped table-bordered" 
                                   ID="GridView1"  runat="server"></asp:GridView>
+                               
                             </div>
 
                         </div>
