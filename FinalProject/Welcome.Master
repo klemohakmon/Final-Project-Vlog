@@ -22,8 +22,8 @@
     
 
     <%--jquary--%>
-    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
- <%--   <script src="bootstrap/js/jquery.min.js"></script>--%>
+   <%-- <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>--%> <%--// this the previews--%>
+    <script src="bootstrap/js/jquery.min.js"></script>
     <%--popper js--%>
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>

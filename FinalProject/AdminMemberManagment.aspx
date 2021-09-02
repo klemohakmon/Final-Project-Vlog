@@ -125,7 +125,7 @@
                             <div class="col-8 mx-auto">                     
                                  <div class="form-group">
                                      <asp:Button class="btn btn-block btn-danger"
-                                         ID="Button1" runat="server" Text="Delete User Account" />
+                                         ID="Button1" runat="server" Text="Delete User Account" OnClick="Button1_Click" />
                                   
                                 </div>
                             </div>
