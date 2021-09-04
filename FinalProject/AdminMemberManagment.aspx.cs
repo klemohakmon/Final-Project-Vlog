@@ -26,6 +26,14 @@ namespace FinalProject
         // user defind function
         void getMemberByID()
         {
+            if (TextBox1.Text.Trim().Equals(""))
+            {
+                Response.Write("<script>alert('Member ID cannot be blank');</script>");
+            }
+            else
+            {
+
+            
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -64,6 +72,7 @@ namespace FinalProject
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
 
             }
+        }
         }
         // Delete user Account
         protected void Button1_Click(object sender, EventArgs e)
