@@ -26,14 +26,6 @@ namespace FinalProject
         // user defind function
         void getMemberByID()
         {
-            if (TextBox1.Text.Trim().Equals(""))
-            {
-                Response.Write("<script>alert('Member ID cannot be blank');</script>");
-            }
-            else
-            {
-
-            
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -57,15 +49,11 @@ namespace FinalProject
                         TextBox5.Text = dr.GetValue(7).ToString();
 
                     }
-
                 }
                 else
                 {
                     Response.Write("<script>alert('Invalid credentials');</script>");
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -73,14 +61,14 @@ namespace FinalProject
 
             }
         }
-        }
+        
         // Delete user Account
         protected void Button1_Click(object sender, EventArgs e)
         {
             DeleteMemberAccount();
         }
 
-        void DeleteMemberAccount()
+        bool checkIfMemberExists()
         {
             try
             {
@@ -89,19 +77,54 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-
-                SqlCommand cmd = new SqlCommand("DELETE from members_tbl where member_id =" + TextBox1.Text.Trim() + "'", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<script>alert('User Account Delete Succesfully');</script>");
-                clearForm();
-                GridView1.DataBind();
+                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where member_id = '" + TextBox1.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count>=1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception ex)
             {
-
-
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
+                    return false;
+            }
+        }
+
+        void DeleteMemberAccount()
+        {
+            if (checkIfMemberExists())
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand("DELETE from members_tbl where member_id =" + TextBox1.Text.Trim() + "'", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<script>alert('User Account Delete Succesfully');</script>");
+                    clearForm();
+                    GridView1.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
+                
+            }
+            else
+            {
+                Response.Write("<script>alert('Invalid Member ID');</script>");
             }
         }
         void clearForm()
