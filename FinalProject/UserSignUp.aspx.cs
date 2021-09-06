@@ -24,19 +24,13 @@ namespace FinalProject
             if (checkMemberExsists())
             {
                 Response.Write("<script>alert('Member Already Exist with this Member ID, Pls try other ID ');</script>");
-
             }
             else
             {
-                signUpNewMember();
-                
-            }
-            
+                signUpNewMember();               
+            }            
         }
-
-
-
-        //user defined method
+          //user defined method
         bool checkMemberExsists() 
         {
             try
@@ -52,31 +46,23 @@ namespace FinalProject
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-
                 if (dt.Rows.Count >= 1)     
                 {
                     return true;
                 }
                 else
                 {
-                    return false;
-                    
-                }
-    
-
+                    return false;                    
+                }   
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
                 return false;
-            }
-            
+            }            
         }
-
-
         void signUpNewMember()
         {
-
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -86,7 +72,6 @@ namespace FinalProject
                 }
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO members_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password) values (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password) ", con);
-
                 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
@@ -98,24 +83,15 @@ namespace FinalProject
                 cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@member_id", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());
-               
-               
-               
-                
-
+                 
                 cmd.ExecuteNonQuery();
                 con.Close();
                
-                Response.Write("<script>alert('Sign Up Successful. Go to User Login To Login');</script>");
-               
-
-
-
+                Response.Write("<script>alert('Sign Up Successful. Go to User Login To Login');</script>"); 
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
-
             }
         }
     }
