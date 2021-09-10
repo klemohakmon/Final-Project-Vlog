@@ -185,7 +185,7 @@
                                         <asp:BoundField DataField="vlog_name" HeaderText="Vlog Name" SortExpression="vlog_name" />
                                         <asp:BoundField DataField="language" HeaderText="Language" SortExpression="language" />
                                         <asp:BoundField DataField="vlog_date_upload" HeaderText="Vlog upload date" SortExpression="vlog_date_upload" />
-                                        <asp:BoundField DataField="category" HeaderText="Category" SortExpression="category" />
+                                        <asp:BoundField DataField="genre" HeaderText="Genre" SortExpression="genre" />
                                         <asp:BoundField DataField="vlog_description" HeaderText="Vlog description" SortExpression="vlog_description" />
                                     </Columns>
                                 </asp:GridView>

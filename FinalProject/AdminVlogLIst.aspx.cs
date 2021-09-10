@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -50,21 +52,29 @@ namespace FinalProject
                 }
                 genres = genres.Remove(genres.Length - 1);
 
+                string filepath = "~/Vlog_inventory/vlog8.jpg";
+                string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.SaveAs(Server.MapPath("~/Vlog_inventory/"));
+                filepath = "~Vlog_inventory/" + filename;
+
                 SqlConnection con = new SqlConnection(strcon);
-                if (con.State == System.Data.ConnectionState.Closed)
+                if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO vlog_upload(vlog_id,vlog_name,language,vlog_date_upload,category,vlog_description,vlog_link) values (@vlog_id,@vlog_name,@language,@vlog_date_upload,@category,@vlog_description,@vlog_link)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO vlog_upload(vlog_id,vlog_name,language,vlog_date_upload,genre,vlog_description,vlog_link) values (@vlog_id,@vlog_name,@language,@vlog_date_upload,@genre,@vlog_description,@vlog_link)", con);
                 cmd.Parameters.AddWithValue("@vlog_id", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_name", TextBox2.Text.Trim());
+                cmd.Parameters.AddWithValue("@genre",genres);
                 cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@vlog_date_upload", TextBox3.Text.Trim());
-                cmd.Parameters.AddWithValue("@category", ListBox1.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
-                
-
+                cmd.Parameters.AddWithValue("@vlog_link",filepath);
+                cmd.BeginExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Vlog added successfully.');</script>");
+                GridView1.DataBind();
             }
             catch (Exception ex)
             {

@@ -1746,7 +1746,7 @@
     <Content Include="images\vlog5.jpg" />
     <Content Include="images\vlog6.jpg" />
     <Content Include="images\vlog7.jpg" />
-    <Content Include="Vlog_inventory_images\vlog8.jpg" />
+    <Content Include="Vlog_inventory\vlog8.jpg" />
     <Content Include="images\vlog9.jpg" />
     <Content Include="UserProfile.aspx" />
     <Content Include="UserSignUp.aspx" />
