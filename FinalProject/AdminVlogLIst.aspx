@@ -20,7 +20,7 @@
      
   <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6">
              
                 <div class="card">
                     <div class="card-body"> 
@@ -96,17 +96,29 @@
                             </div>
                   
                             <div class="col-md-4">
-                                <label>Category</label>
+                                <label>Genre</label>
                                 <div class="form-group">
-                                    <asp:ListBox  CssClass="form-control" ID="ListBox1" runat="server" Rows="3" SelectionMode="Multiple">
+                                    <asp:ListBox  CssClass="form-control" ID="ListBox1" runat="server" Rows="5" SelectionMode="Multiple">
                                         <asp:ListItem Text="Action" Value="Action"/>
-                                         <asp:ListItem Text="Fun" Value="Fun"/>
+                                        <asp:ListItem Text="Fun" Value="Fun"/>
                                         <asp:ListItem Text="Cooking" Value="Cooking"/>
                                         <asp:ListItem Text="Socializing" Value="Socializing"/>
                                         <asp:ListItem Text="Private" Value="Private"/>
                                         <asp:ListItem Text="Build" Value="Build"/>
                                         <asp:ListItem Text="Sport" Value="Sport"/>
                                         <asp:ListItem Text="Education" Value="Education"/>
+                                        <asp:ListItem Text="Comic" Value="Comic"/>
+                                        <asp:ListItem Text="Self Help" Value="Self Help"/>
+                                        <asp:ListItem Text="Motivation" Value="Motivation"/>
+                                        <asp:ListItem Text="Healthy Living" Value="Healthy Living"/>
+                                        <asp:ListItem Text="Wellness" Value="Wellness"/>
+                                        <asp:ListItem Text="Fantasy" Value="Fantasy"/>
+                                        <asp:ListItem Text="Vication" Value="Vication"/>
+                                        <asp:ListItem Text="Home Made" Value="Vication"/>
+                                        <asp:ListItem Text="Art" Value="Art"/>
+                                        <asp:ListItem Text="Autobiography" Value="Autobiography"/>
+                                        <asp:ListItem Text="Travel" Value="Travel"/>
+                                        <asp:ListItem Text="Animals" Value="Animals"/>
                                         
                                     </asp:ListBox>
                                 </div>
@@ -148,7 +160,7 @@
             
 
 
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">   
                         <div class="row text-center">
