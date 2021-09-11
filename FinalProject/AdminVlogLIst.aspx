@@ -9,7 +9,7 @@
                 reader.onload = function (e) {
                     $('#imgview').attr('src', e.target.result);
                 };
-                reader.raedAsDataURL(input.files[0]);
+                reader.readAsDataURL(input.files[0]);
             }
         }
 
