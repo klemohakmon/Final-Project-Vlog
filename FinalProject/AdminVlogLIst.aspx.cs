@@ -18,7 +18,7 @@ namespace FinalProject
         {
             GridView1.DataBind();
         }
-          // go button click
+        // go button click
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
 
