@@ -73,7 +73,7 @@ namespace FinalProject
                         con.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand("DELETE from members_tbl where member_id =" + TextBox1.Text.Trim() + "'", con);
+                    SqlCommand cmd = new SqlCommand("DELETE from members_tbl where member_id ='" + TextBox1.Text.Trim() + "'", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     Response.Write("<script>alert('User Account Delete Succesfully');</script>");

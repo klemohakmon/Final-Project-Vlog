@@ -28,9 +28,9 @@
       <%--datatables js--%>
     <script src="DataTable/js/jquery.dataTables.min.js"></script>
     
-   <%--  <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
 
-    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>--%>
+    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
