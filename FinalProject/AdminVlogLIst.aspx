@@ -34,7 +34,7 @@
                         <div class="row text-center">
                             <div class="col">
 
-                                <img id="imgview" width="100" src="Vlog_inventory_images/vlog8.jpg"/>
+                                <img id="imgview" width="100" src="Vlog_inventory/vlog8.jpg"/>
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@
                             </div>
                   
                             <div class="col-md-4">
-                                <label>Genre</label>
+                                <label>Category</label>
                                 <div class="form-group">
                                     <asp:ListBox  CssClass="form-control" ID="ListBox1" runat="server" Rows="5" SelectionMode="Multiple">
                                         <asp:ListItem Text="Action" Value="Action"/>

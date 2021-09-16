@@ -63,10 +63,10 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO vlog_upload(vlog_id,vlog_name,language,vlog_date_upload,genre,vlog_description,vlog_link) values (@vlog_id,@vlog_name,@language,@vlog_date_upload,@genre,@vlog_description,@vlog_link)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO vlog_upload(vlog_id,vlog_name,language,vlog_date_upload,category,vlog_description,vlog_link) values (@vlog_id,@vlog_name,@language,@vlog_date_upload,@category,@vlog_description,@vlog_link)", con);
                 cmd.Parameters.AddWithValue("@vlog_id", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_name", TextBox2.Text.Trim());
-                cmd.Parameters.AddWithValue("@genre",genres);
+                cmd.Parameters.AddWithValue("@category", genres);
                 cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@vlog_date_upload", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());

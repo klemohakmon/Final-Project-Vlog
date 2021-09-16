@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Web Vlog</title>
 
-   <%-- <meta charset="utf-8">
+    <%-- <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">--%>
     <%--bootstrap.css--%>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -14,22 +14,21 @@
     <link href="DataTable/css/jquery.dataTables.min.css" rel="stylesheet" />
     <%--FontAwesome.css--%>
     <link href="FontAwesome/css/all.css" rel="stylesheet" />
-     <%--our Custom css--%>
- <%--   <link href="css/CustomStyleSheet.css" rel="stylesheet" />--%>
-    
+    <%--     our Custom css--%>
+    <%--   <link href="css/CustomStyleSheet.css" rel="stylesheet" />--%>
+
 
     <%--jquary--%>
-   <%-- <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>--%> <%--// this the previews--%>
+    <%-- <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>--%>--%> <%--// this the previews--%>--%>
     <script src="bootstrap/js/jquery.min.js"></script>
     <%--popper js--%>
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-      <%--datatables js--%>
+    <%--datatables js--%>
     <script src="DataTable/js/jquery.dataTables.min.js"></script>
-    
-     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
 
+    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
