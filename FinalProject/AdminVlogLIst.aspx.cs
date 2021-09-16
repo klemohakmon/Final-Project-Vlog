@@ -26,7 +26,15 @@ namespace FinalProject
         // Add button click
         protected void Button2_Click(object sender, EventArgs e)
         {
-            addNewVlog();
+            if (checkIfVlogExists())
+            {
+                Response.Write("<script>alert('Book Already Exist, try some other Vlog ID');</script>");
+            }
+            else
+            {
+                addNewVlog();
+            }
+            
         }
         // Update button click
         protected void Button3_Click(object sender, EventArgs e)
@@ -39,18 +47,50 @@ namespace FinalProject
 
         }
 
+
+        bool checkIfVlogExists()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * from vlog_upload where vlog_id = '" + TextBox1.Text.Trim() + "' OR Vlog Name'" + TextBox2.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
+            }
+        }
+
+
         //user definde functions       
 
         void addNewVlog()
         {
             try
             {
-                string genres = ""; // this is for the Category
+                string categories = ""; // this is for the Category to choose a fue categories
                 foreach (int i in ListBox1.GetSelectedIndices())
                 {
-                    genres = genres + ListBox1.Items[i] + ",";
+                    categories = categories + ListBox1.Items[i] + ",";
                 }
-                genres = genres.Remove(genres.Length - 1);
+                categories = categories.Remove(categories.Length - 1);
 
                 string filepath = "~/Vlog_inventory/vlog8.jpg";
                 string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
@@ -66,12 +106,12 @@ namespace FinalProject
                 SqlCommand cmd = new SqlCommand("INSERT INTO vlog_upload(vlog_id,vlog_name,language,vlog_date_upload,category,vlog_description,vlog_link) values (@vlog_id,@vlog_name,@language,@vlog_date_upload,@category,@vlog_description,@vlog_link)", con);
                 cmd.Parameters.AddWithValue("@vlog_id", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_name", TextBox2.Text.Trim());
-                cmd.Parameters.AddWithValue("@category", genres);
+                cmd.Parameters.AddWithValue("@category", categories);
                 cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@vlog_date_upload", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_link",filepath);
-                cmd.BeginExecuteNonQuery();
+                cmd.ExecuteNonQuery(); 
                 con.Close();
                 Response.Write("<script>alert('Vlog added successfully.');</script>");
                 GridView1.DataBind();

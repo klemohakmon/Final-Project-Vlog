@@ -62,7 +62,7 @@ namespace FinalProject
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
               
             }
