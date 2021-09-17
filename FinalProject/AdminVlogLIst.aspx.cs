@@ -92,10 +92,10 @@ namespace FinalProject
                 }
                 categories = categories.Remove(categories.Length - 1);
 
-                string filepath = "~/Vlog_inventory/vlog8.jpg";
+                string filepath = "/Vlog_inventory/vlog8.jpg";
                 string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
-                FileUpload1.SaveAs(Server.MapPath("~/Vlog_inventory/"));
-                filepath = "~Vlog_inventory/" + filename;
+                FileUpload1.SaveAs(Server.MapPath("Vlog_inventory/" + filename));
+                filepath = "/Vlog_inventory/" + filename;
 
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
