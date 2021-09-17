@@ -28,7 +28,7 @@ namespace FinalProject
         {
             if (checkIfVlogExists())
             {
-                Response.Write("<script>alert('Book Already Exist, try some other Vlog ID');</script>");
+                Response.Write("<script>alert('Vlog Already Exist, try some other Vlog ID');</script>");
             }
             else
             {
