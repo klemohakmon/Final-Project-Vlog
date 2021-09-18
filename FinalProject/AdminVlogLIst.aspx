@@ -182,11 +182,23 @@
                                   ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="vlog_id" DataSourceID="SqlDataSource1">
                                     <Columns>
                                         <asp:BoundField DataField="vlog_id" HeaderText="Vlog ID" ReadOnly="True" SortExpression="vlog_id" />
-                                        <asp:BoundField DataField="vlog_name" HeaderText="Vlog Name" SortExpression="vlog_name" />
-                                        <asp:BoundField DataField="language" HeaderText="Language" SortExpression="language" />
-                                        <asp:BoundField DataField="vlog_date_upload" HeaderText="Vlog upload date" SortExpression="vlog_date_upload" />
-                                        <asp:BoundField DataField="category" HeaderText="Category" SortExpression="category" />
-                                        <asp:BoundField DataField="vlog_description" HeaderText="Vlog description" SortExpression="vlog_description" />
+                                       
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <div class="container-fluid">
+                                                    <div class="row">   
+                                                        <div class="col-lg-10">
+
+                                                        </div>
+                                                        <div class="col-lg-2">                                                            
+                                                            <asp:Image CssClass="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("vlog_link") %>' />
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                       
                                     </Columns>
                                 </asp:GridView>
                             </div>
