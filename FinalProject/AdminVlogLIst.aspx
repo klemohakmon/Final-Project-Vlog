@@ -34,7 +34,7 @@
                         <div class="row text-center">
                             <div class="col">
 
-                                <img id="imgview" width="100" src="Vlog_inventory/vlog8.jpg"/>
+                                <img id="imgview" height="150" width="100" src="Vlog_inventory/vlog8.jpg"/>
                             </div>
                         </div>
 
@@ -181,15 +181,50 @@
                                 <asp:GridView class="table table-striped table-bordered" 
                                   ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="vlog_id" DataSourceID="SqlDataSource1">
                                     <Columns>
-                                        <asp:BoundField DataField="vlog_id" HeaderText="Vlog ID" ReadOnly="True" SortExpression="vlog_id" />
+                                        <asp:BoundField DataField="vlog_id" HeaderText="ID" ReadOnly="True" SortExpression="vlog_id" />
                                        
                                         <asp:TemplateField>
                                             <ItemTemplate>
                                                 <div class="container-fluid">
                                                     <div class="row">   
                                                         <div class="col-lg-10">
+                                                            <div class="row"> 
+                                                               <div class="col-12">
+                                                                   <asp:Label ID="Label1" runat="server" Text='<%# Eval("vlog_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                                                               </div>
+                                                            </div>
+
+                                                             <div class="row"> 
+                                                               <div class="col-12">
+
+                                                                   <label>
+                                                                   Language -</label><asp:Label ID="Label2" runat="server" Text='<%# Eval("language") %>'></asp:Label>
+                                                                   &nbsp;|
+                                                                   <label>
+                                                                   Category</label> -<asp:Label ID="Label3" runat="server" Text='<%# Eval("category") %>'></asp:Label>
+                                                                   &nbsp;</div>
+                                                            </div>
+
+                                                             <div class="row"> 
+                                                               <div class="col-12">
+
+                                                                   <label>
+                                                                   Vlog Date Upload -
+                                                                   </label>
+                                                                   <asp:Label ID="Label4" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label>
+                                                                   &nbsp;|
+
+                                                               </div>
+                                                            </div>
+
+                                                             <div class="row"> 
+                                                               <div class="col-12">
+
+                                                               </div>
+                                                            </div>
 
                                                         </div>
+
                                                         <div class="col-lg-2">                                                            
                                                             <asp:Image CssClass="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("vlog_link") %>' />
                                                         </div>
