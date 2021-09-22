@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="AdminVlogLIst.aspx.cs" Inherits="FinalProject.AdminVlogLIst" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
+         <%--JQuary for the search--%>
+          $(document).ready(function () {
+         $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable(); 
+        });
+         
+
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -181,7 +187,11 @@
                                 <asp:GridView class="table table-striped table-bordered" 
                                   ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="vlog_id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                                     <Columns>
-                                        <asp:BoundField DataField="vlog_id" HeaderText="ID" ReadOnly="True" SortExpression="vlog_id" />
+                                        <asp:BoundField DataField="vlog_id" HeaderText="ID" ReadOnly="True" SortExpression="vlog_id" >
+                                       
+                                        <FooterStyle Font-Bold="False" />
+                                        <ItemStyle Font-Bold="True" />
+                                        </asp:BoundField>
                                        
                                         <asp:TemplateField>
                                             <ItemTemplate>
@@ -198,10 +208,10 @@
                                                                <div class="col-12">
 
                                                                    <label>
-                                                                   Language -</label><asp:Label ID="Label2" runat="server" Text='<%# Eval("language") %>'></asp:Label>
+                                                                   Language -</label><asp:Label ID="Label2" runat="server" Text='<%# Eval("language") %>' Font-Bold="True"></asp:Label>
                                                                    &nbsp;|
                                                                    <label>
-                                                                   Category</label> -<asp:Label ID="Label3" runat="server" Text='<%# Eval("category") %>'></asp:Label>
+                                                                   Category</label> -<asp:Label ID="Label3" runat="server" Text='<%# Eval("category") %>' Font-Bold="True"></asp:Label>
                                                                    &nbsp;</div>
                                                             </div>
 
@@ -211,7 +221,7 @@
                                                                    <label>
                                                                    Vlog Date Upload -
                                                                    </label>
-                                                                   <asp:Label ID="Label4" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label>
+                                                                   <asp:Label ID="Label4" runat="server" Text='<%# Eval("vlog_date_upload") %>' Font-Bold="True"></asp:Label>
                                                                    &nbsp;|
 
                                                                </div>
@@ -219,6 +229,9 @@
 
                                                              <div class="row"> 
                                                                <div class="col-12">
+
+                                                                   Description -
+                                                                   <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("vlog_description") %>'></asp:Label>
 
                                                                </div>
                                                             </div>
