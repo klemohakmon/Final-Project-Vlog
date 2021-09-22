@@ -122,6 +122,10 @@ namespace FinalProject
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-        
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
