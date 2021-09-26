@@ -23,14 +23,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     
   <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-             
                 <div class="card">
                     <div class="card-body"> 
-
                         <div class="row text-center">
                             <div class="col">
                                 <h4>Vlog Details</h4>
@@ -58,21 +55,19 @@
 
                         <div class="row">
 
-                             <div class="col-md-3">
+                             <div class="col-md-4">
                                 <label>Vlog ID</label>
                                 <div class="form-group">
                                     <div class="input-group">
   
                                     <asp:TextBox CssClass="form-control" ID="TextBox1" 
                                 runat="server" placeholder="Vlog ID" ></asp:TextBox>
-                                        <asp:LinkButton CssClass="btn btn-primary" ID="LinkButton4"
-                                runat="server" OnClick="LinkButton4_Click" Width="16px"><i class="fas fa-check-circle"></i></asp:LinkButton>
-                                      
+                                        <asp:Button class="btn btn-primary" ID="Button4" runat="server" Text="Go" OnClick="Button4_Click" />
                                 </div>
                             </div>
                          </div>
 
-                            <div class="col-md-9">
+                            <div class="col-md-8">
                                 <label>Vlog Name</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBox2" 
@@ -125,13 +120,10 @@
                                         <asp:ListItem Text="Autobiography" Value="Autobiography"/>
                                         <asp:ListItem Text="Travel" Value="Travel"/>
                                         <asp:ListItem Text="Animals" Value="Animals"/>
-                                        
                                     </asp:ListBox>
                                 </div>
                             </div>
-                         </div>
-                   
-                       
+                         </div>                                          
                                         
                         <div class="row">
                             <div class="col-12">
@@ -164,8 +156,6 @@
                             <br />
               </div>  
             
-
-
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">   
@@ -188,11 +178,9 @@
                                   ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="vlog_id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                                     <Columns>
                                         <asp:BoundField DataField="vlog_id" HeaderText="ID" ReadOnly="True" SortExpression="vlog_id" >
-                                       
                                         <FooterStyle Font-Bold="False" />
                                         <ItemStyle Font-Bold="True" />
                                         </asp:BoundField>
-                                       
                                         <asp:TemplateField>
                                             <ItemTemplate>
                                                 <div class="container-fluid">
@@ -217,13 +205,11 @@
 
                                                              <div class="row"> 
                                                                <div class="col-12">
-
                                                                    <label>
                                                                    Vlog Date Upload -
                                                                    </label>
                                                                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("vlog_date_upload") %>' Font-Bold="True"></asp:Label>
                                                                    &nbsp;|
-
                                                                </div>
                                                             </div>
 
@@ -235,28 +221,22 @@
 
                                                                </div>
                                                             </div>
-
                                                         </div>
 
                                                         <div class="col-lg-2">                                                            
                                                             <asp:Image CssClass="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("vlog_link") %>' />
                                                         </div>
-                                                    </div>
-                                                
+                                                    </div>                                                
                                                 </div>
                                             </ItemTemplate>
-                                        </asp:TemplateField>
-                                       
+                                        </asp:TemplateField>                              
                                     </Columns>
                                 </asp:GridView>
                             </div>
-
                         </div>
                      </div>
                   </div>
-                       
                  </div>
                </div>  
              </div>     
-
 </asp:Content>

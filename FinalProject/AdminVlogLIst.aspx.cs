@@ -18,8 +18,9 @@ namespace FinalProject
         {
             GridView1.DataBind();
         }
+       
         // go button click
-        protected void LinkButton4_Click(object sender, EventArgs e)
+        protected void Button4_Click(object sender, EventArgs e)
         {
 
         }
@@ -79,7 +80,39 @@ namespace FinalProject
         }
 
 
-        //user definde functions       
+        //user definde functions
+        
+        void getVlogByID()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * from vlog_upload WHERE vlog_id ='" + TextBox1.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    TextBox2.Text = dt.Rows[0]["vlog_name"].ToString();
+                    DropDownList1.SelectedValue = dt.Rows[0]["language"].ToString();
+                    TextBox3.Text = dt.Rows[0]["vlog_date_upload"].ToString();
+
+                }
+                else
+                {
+                    Response.Write("<script>alert('invalid Vlog ID');</script>");
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+        }
 
         void addNewVlog()
         {
@@ -127,5 +160,7 @@ namespace FinalProject
         {
 
         }
+
+       
     }
 }
