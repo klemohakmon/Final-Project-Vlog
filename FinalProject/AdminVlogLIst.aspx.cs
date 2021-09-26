@@ -22,7 +22,7 @@ namespace FinalProject
         // go button click
         protected void Button4_Click(object sender, EventArgs e)
         {
-
+            getVlogByID();
         }
         // Add button click
         protected void Button2_Click(object sender, EventArgs e)
@@ -98,9 +98,24 @@ namespace FinalProject
                 if (dt.Rows.Count >= 1)
                 {
                     TextBox2.Text = dt.Rows[0]["vlog_name"].ToString();
-                    DropDownList1.SelectedValue = dt.Rows[0]["language"].ToString();
                     TextBox3.Text = dt.Rows[0]["vlog_date_upload"].ToString();
+                    TextBox5.Text = dt.Rows[0]["vlog_description"].ToString();
+                    DropDownList1.SelectedValue = dt.Rows[0]["language"].ToString().Trim();
+                    
 
+                    ListBox1.ClearSelection();
+                    string[] category = dt.Rows[0]["category"].ToString().Trim().Split(',');
+                    for (int i = 0; i < category.Length; i++) // check if the category is choose
+                    {
+                        for (int j = 0; j < ListBox1.Items.Count; j++)
+                        {
+                            if (ListBox1.Items[j].ToString() == category[i])
+                            {
+                                ListBox1.Items[j].Selected = true;
+                            }
+                          
+                        }
+                    }
                 }
                 else
                 {
