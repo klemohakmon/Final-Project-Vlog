@@ -81,6 +81,10 @@ namespace FinalProject
 
 
         //user definde functions
+        void updateVlogByID()
+        {
+
+        }
         
         void getVlogByID()
         {
