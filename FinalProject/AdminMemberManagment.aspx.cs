@@ -60,7 +60,6 @@ namespace FinalProject
                 return false;
             }
         }
-
         void DeleteMemberAccount()
         {
             if (checkIfMemberExists())
@@ -84,14 +83,12 @@ namespace FinalProject
                 {
                     Response.Write("<script>alert('" + ex.Message + "');</script>");
                 }
-
             }
             else
             {
                 Response.Write("<script>alert('Invalid Member ID');</script>");
             }
         }
-
         void getMemberByID()
         {
             try
@@ -115,7 +112,6 @@ namespace FinalProject
                         TextBox9.Text = dr.GetValue(5).ToString();
                         TextBox7.Text = dr.GetValue(6).ToString();
                         TextBox5.Text = dr.GetValue(7).ToString();
-
                     }
                 }
                 else
@@ -126,12 +122,8 @@ namespace FinalProject
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
-
             }
-        }
-
-       
-      
+        }     
         void clearForm()
         {
             TextBox1.Text = "";
