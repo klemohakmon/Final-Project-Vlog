@@ -47,11 +47,39 @@ namespace FinalProject
         // Delete button click
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            deleteVlogByID();
         }
 
         //user definde functions
 
+        void deleteVlogByID()
+        {
+            if (checkIfVlogExists())
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "'", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
+                    GridView1.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Invalid Member ID');</script>");
+            }
+        }
         void updateVlogByID()
         {
             if (checkIfVlogExists())
