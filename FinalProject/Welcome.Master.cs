@@ -120,5 +120,10 @@ namespace FinalProject
             LinkButton11.Visible = false; // Admin Member Managment link button
             Response.Redirect("HomePage.aspx");
         }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserProfile.aspx");
+        }
     }
  }
