@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="FinalProject.UserProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript">    //calling the database library
+        $(document).ready(function () {
+         $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -138,7 +143,7 @@
                             <div class="col-8 mx-auto">                     
                                  <div class="form-group">
                                      <asp:Button class="btn btn-primary btn-block"
-                                         ID="Button1" runat="server" Text="Update" />
+                                         ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" />
                                   
                                 </div>
                             </div>
