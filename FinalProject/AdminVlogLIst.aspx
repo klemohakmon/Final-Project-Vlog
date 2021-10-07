@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
          <%--JQuary for the search--%>
-          $(document).ready(function () {
+          $(document).ready(function() {
          $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable(); 
         });
          
