@@ -30,16 +30,14 @@ namespace FinalProject
                 }
                 SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where member_id = '" + TextBox1.Text.Trim() + "' AND password ='" +TextBox2.Text.Trim() +"'", con); ;
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
+                if (dr.Read())
                 {
-                    while (dr.Read())
-                    {
-                        Response.Write("<script>alert('Login Successful');</Script>");
-                        Session["user_name"] = dr.GetValue(8).ToString();
-                        Session["fullname"] = dr.GetValue(0).ToString();
-                        Session["role"] = "Member";
-                        
-                    }
+                      
+                    Session["User_id"] = dr["User_id"].ToString();
+                    Session["full_name"] = dr["full_name"].ToString();             
+                    Session["role"] = dr["role"].ToString(); ;
+                    Response.Write("<script>alert('Login Successful');window.location='HomePage.aspx';</Script>");
+                 
                     Response.Redirect("HomePage.aspx");
                 }
                 else

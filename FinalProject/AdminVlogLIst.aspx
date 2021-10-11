@@ -11,9 +11,9 @@
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    $('#imgview').attr('src', e.target.result);
-                };
+                //reader.onload = function (e) {
+                //    $('#imgview').attr('src', e.target.result);
+                //};
                 reader.readAsDataURL(input.files[0]);
             }
         }
@@ -221,8 +221,13 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-lg-2">                                                            
-                                                            <asp:Image CssClass="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("vlog_link") %>' />
+                                                        <div class="col-lg-2">    
+                                                            <video width="320" height="240" controls>
+                                                                              <source src="<%# Eval("vlog_link") %>" type="video/mp4">
+                                                                              
+                                                                            
+                                                                            </video>
+                                                           <%-- <asp:Image CssClass="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("vlog_link") %>' />--%>
                                                         </div>
                                                     </div>                                                
                                                 </div>
