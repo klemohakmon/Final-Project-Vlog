@@ -34,8 +34,8 @@ namespace FinalProject
                 {
                       
                     Session["User_id"] = dr["User_id"].ToString();
-                    Session["full_name"] = dr["full_name"].ToString();             
-                    Session["role"] = dr["role"].ToString(); ;
+                    Session["full_name"] = dr["full_name"].ToString();
+                    Session["role"] = "Member";
                     Response.Write("<script>alert('Login Successful');window.location='HomePage.aspx';</Script>");
                  
                     Response.Redirect("HomePage.aspx");

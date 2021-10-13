@@ -35,7 +35,7 @@ namespace FinalProject
 
                     LinkButton3.Visible = true; // logout link button
                     LinkButton7.Visible = true; // hello user link button
-                    LinkButton7.Text = "Hello" + Session["user_name"].ToString();
+                    LinkButton7.Text = "Hello" + Session["User_id"].ToString();
 
                     LinkButton6.Visible = false; // admin login link button
 
@@ -102,7 +102,7 @@ namespace FinalProject
         // Logout button
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Session["user_name"] = "";
+            Session["User_id"] = "";
             Session["fullname"] = "";
             Session["role"] = "";
 
