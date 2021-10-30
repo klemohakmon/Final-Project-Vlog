@@ -183,7 +183,7 @@
                      </div>
                   </div>
                        
-                 </div>  // table and List of User uplaod vlogs
+                 </div> 
                        </div>
                    </div>
 
