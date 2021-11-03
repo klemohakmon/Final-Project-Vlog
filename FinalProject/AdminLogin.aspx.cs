@@ -30,22 +30,20 @@ namespace FinalProject
                 }
                 SqlCommand cmd = new SqlCommand("SELECT * from AdminLogin where user_name = '" + TextBox1.Text.Trim() + "' AND password ='" + TextBox2.Text.Trim() + "'", con); ;
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
+               
+                    if (dr.Read())
                     {
                         // Response.Write("<script>alert('" + dr.GetValue(0).ToString() + "');</Script>");
                         Session["user_name"] = dr.GetValue(0).ToString();
                         Session["fullname"] = dr.GetValue(2).ToString();
                         Session["role"] = "Admin";
+                        Response.Redirect("HomePage.aspx");
 
                     }
-                    Response.Redirect("HomePage.aspx");
-                }
-                else
-                {
-                    Response.Write("<script>alert('Invalid credentials');</script>");
-                }
+                    else
+                    {
+                        Response.Write("<script>alert('Invalid credentials');</script>");
+                    }
 
 
 

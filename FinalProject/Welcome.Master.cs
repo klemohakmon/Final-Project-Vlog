@@ -32,7 +32,6 @@ namespace FinalProject
                 {
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
-
                     LinkButton3.Visible = true; // logout link button
                     LinkButton7.Visible = true; // hello user link button
                     LinkButton7.Text = "Hello" + Session["full_name"].ToString();
