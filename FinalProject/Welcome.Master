@@ -76,6 +76,11 @@
                             <asp:LinkButton Class="nav-link" ID="LinkButton7" 
                                 runat="server" Visible="False" OnClick="LinkButton7_Click">Hello User</asp:LinkButton>                     
                              </li>
+                        <li class=" nav-item active">
+                            <asp:LinkButton Class="nav-link"  ID="LinkButtonUserVlogList"
+                                runat="server" Visible="false" OnClick="LinkButtonUserVlogList_Click">Your Vlogs</asp:LinkButton>
+                        </li>
+
                          </ul>                
                      </div>
             </nav>   

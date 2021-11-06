@@ -35,6 +35,8 @@ namespace FinalProject
                     LinkButton3.Visible = true; // logout link button
                     LinkButton7.Visible = true; // hello user link button
                     LinkButton7.Text = "Hello" + Session["full_name"].ToString();
+                    LinkButtonUserVlogList.Visible = true; //user vlog list in his on profile
+
 
                     LinkButton6.Visible = false; // admin login link button
 
@@ -123,6 +125,11 @@ namespace FinalProject
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
             Response.Redirect("UserProfile.aspx");
+        }
+
+        protected void LinkButtonUserVlogList_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserVlogList.aspx");
         }
     }
  }
