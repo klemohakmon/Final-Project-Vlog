@@ -1,104 +1,104 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="FinalProject.HomePage" %>
+
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ <link href="css/homepage.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <section>
-        <img width="1370" src="images/HomePagepic.jpg " class="img-fluid"/>
-    </section>        <%-- All the details about us and the pics--%> 
+
+	<header>
+		<div class="circle"></div>
+		<div class="circle"></div>
+
+<%--		<nav>
+			<h1 class="logo">s</h1>
+			<ul class="navigation">
+				<li><a href="#"></a></li>
+				<li><a href="#"> </a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</nav>--%>
+
+		<div class="hero">
+			<h1>Wellcome	
+				To Our
+				VLOG site
+			</h1>
+			<a href="viewvlogs.aspx">Click for VLOGS</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="news">
+			<h3>In Our Site</h3>
+			<div class="item">
+				<h4>YOU CAN VIEW VLOGS</h4>
+				
+			</div>
+			<div class="item">
+				<h4>YOU CAN CREATE PROFILE</h4>
+				
+			</div>
+			<div class="item">
+				<h4>YOU CAN UPLOAD YOU OWN VLOGS</h4>
+				
+			</div>
+			<div class="item">
+				<h4>YOU CAN BECOME FAMOUS</h4>
+				
+			</div>
+		</div>
+
+		<div class="highlights">
+			<h3>another test</h3>
+			<div class="item">
+				<div class="info">
+					<h4>yes</h4>
+					<p>test</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="info">
+					<h4>yes</h4>
+					<p>test</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="info">
+					<h4>yes</h4>
+					<p>test</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="middle">
+			<p>
+				<span>At VLOG</span>
+				We welcome you to participate and take part in our site, upload content, watch interesting videos of people from all over the world all the time.
+		</div>
+
+<%--		<div class="videos">
+			<h3>Videos</h3>
+			<iframe width="620" height="290" src="https://www.youtube.com/embed/uCTWtDYEJxk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="620" height="290" src="https://www.youtube.com/embed/e8JIs1jZfAU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>--%>
+	</main>
+
   
-
-    <section>
-    <div class="container text-center"> 
-        <div class="row">
-            <div class="col-12">
-                   <h2> Our Features</h2>
-                <p><b>Our 3 Primary Features</b></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-md-4"> 
-                <img width="150" src="images/vlog5.jpg"/>
-                <h4>Start To Vlog</h4>
-                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing 
-                 and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-
-               <div class="col-md-4"> 
-                <img width="150" src="images/vlog4.jpg"/>
-                <h4>Sign Up</h4>
-                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing 
-                 and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-
-               <div class="col-md-4"> 
-                <img width="150" src="images/vlog3.jpg"/>
-                <h4>Search Vlog</h4>
-                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing 
-                 and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-
-         </div>    
-    </div>
-  </section>       <%-- All the details about us and the pics--%> 
-
-     <section>
-        <img width="1370"  src="images/vlog13.jpg" class="img-fluid"/>
-    </section>
-
-    <section>
-    <div class="container text-center"> 
-        <div class="row">
-            <div class="col-12">
-                   <h2> Our Process</h2>
-                <p><b>We have a 3 simple step to process</b></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-md-4"> 
-                <img width="150" src="images/vlog11.jpg"/>
-                <h4>Upload Your Vlog</h4>
-                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing 
-                 and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-
-               <div class="col-md-4"> 
-                <img width="150" src="images/vlog7.jpg"/>
-                <h4>Meet Friends</h4>
-                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing 
-                 and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-
-               <div class="col-md-4"> 
-                <img width="150" src="images/vlog9.jpg"/>
-                <h4>Save Your Vlog</h4>
-                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing 
-                 and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-
-         </div>    
-    </div>
-  </section>
-
-
 </asp:Content>
+
