@@ -85,6 +85,9 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="css\CustomStyleSheet.css" />
     <Content Include="css\homepage.css" />
+    <Content Include="css\master.css" />
+    <Content Include="css\userlogin.css" />
+    <Content Include="css\viewvlogs.css" />
     <Content Include="DataTable\css\jquery.dataTables.min.css" />
     <Content Include="DataTable\js\jquery.dataTables.min.js" />
     <Content Include="FontAwesome\attribution.js" />

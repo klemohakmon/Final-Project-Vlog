@@ -21,6 +21,7 @@ namespace FinalProject
                     LinkButton3.Visible = false; // logout link button
                     LinkButton7.Visible = false; // hello user link button
 
+                    LinkButton5.Visible = false; // user vlog list link button
                     LinkButton6.Visible = true; // admin login link button
 
 
@@ -34,12 +35,10 @@ namespace FinalProject
                     LinkButton2.Visible = false; // sign up link button
                     LinkButton3.Visible = true; // logout link button
                     LinkButton7.Visible = true; // hello user link button
-                    LinkButton7.Text = "Hello" + " " + Session["full_name"].ToString();
-                    LinkButtonUserVlogList.Visible = true; //user vlog list in his on profile
-
+                    LinkButton7.Text = "Hello" + Session["full_name"].ToString();
 
                     LinkButton6.Visible = false; // admin login link button
-
+                    LinkButton5.Visible = true; // user vlog list link button
 
                     LinkButton12.Visible = false; // Movie inventory link button
                     LinkButton11.Visible = false; // Admin Member Managment link button
@@ -50,6 +49,7 @@ namespace FinalProject
                     LinkButton2.Visible = false; // sign up link button
 
                     LinkButton3.Visible = true; // logout link button
+                    LinkButton5.Visible = false; // user vlog list link button
                     LinkButton7.Visible = true; // hello user link button
                     LinkButton7.Text = "Hello Admin";
 
@@ -74,7 +74,10 @@ namespace FinalProject
         {
             Response.Redirect("AdminLogin.aspx");
         }
-
+        protected void LinkButton5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserVlogList.aspx");
+        }
         protected void LinkButton12_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminVlogLIst.aspx");
@@ -125,11 +128,6 @@ namespace FinalProject
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
             Response.Redirect("UserProfile.aspx");
-        }
-
-        protected void LinkButtonUserVlogList_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UserVlogList.aspx");
         }
     }
  }
