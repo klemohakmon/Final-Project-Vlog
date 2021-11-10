@@ -72,7 +72,7 @@
                                 <label>State</label>
                                 <div class="form-group">
                                     <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
-                                        <asp:ListItem Text="Israel" Value="Israel" />
+                                         <asp:ListItem Text="Israel" Value="Israel" />
                                          <asp:ListItem Text="Miami" Value="Miami" />
                                          <asp:ListItem Text="New York" Value="New York" />
                                          <asp:ListItem Text="Oralndo" Value="Oralndo" />
@@ -132,8 +132,6 @@
                                 </div>
                             </div>
                         </div>
-
-
 
                         <div class="row">
                             <div class="col">                     
