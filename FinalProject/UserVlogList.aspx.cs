@@ -274,7 +274,7 @@ namespace FinalProject
                 cmd.Parameters.AddWithValue("@vlog_date_upload", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@vlog_link", filepath);
-                cmd.Parameters.AddWithValue("@vUser_id", Session["User_id"].ToString().Trim());
+                cmd.Parameters.AddWithValue("@User_id", Session["User_id"].ToString().Trim());
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Vlog added successfully.');</script>");
