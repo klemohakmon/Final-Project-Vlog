@@ -57,7 +57,7 @@ namespace FinalProject
 
 
                     LinkButton12.Visible = true; // Movie inventory link button
-                    LinkButton11.Visible = true; // Admin Member Managment link button
+                    LinkButton11.Visible = false; // Admin Member Managment link button
                 }
 
 
@@ -127,7 +127,16 @@ namespace FinalProject
 
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UserProfile.aspx");
+           
+            if(Session["role"].Equals("Admin"))
+            {
+                Response.Redirect("AdminMemberManagment.aspx");
+            }
+            else
+            {
+                Response.Redirect("HomePage.aspx");
+               // Response.Redirect("AdminVlogList.aspx");
+            }
         }
     }
  }
