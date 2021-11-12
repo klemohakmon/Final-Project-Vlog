@@ -15,7 +15,14 @@
 <div class="col-5 col-lg-7 mx-auto mb-5 mb-lg-0">
 
 <div class="pr-lg-5">
-    <h2 class="mb-4">Member Sign Up</h2>
+   
+    <div class="container">
+      <div class="quick-links">
+        <h2 class="mb-4">Member Sign Up</h2>
+          </div>
+      </div>
+
+
 <img src="images/vlog11.jpg" alt="" class="img-fluid" />
 </div>
 </div>

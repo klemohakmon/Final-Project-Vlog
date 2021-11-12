@@ -37,7 +37,7 @@ namespace FinalProject
                         Session["user_name"] = dr.GetValue(0).ToString();
                         Session["fullname"] = dr.GetValue(2).ToString();
                         Session["role"] = "Admin";
-                        Response.Redirect("AdminMemberManagment.aspx");
+                        Response.Redirect("HomePage.aspx");
 
                     }
                     else
