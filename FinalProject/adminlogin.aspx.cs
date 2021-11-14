@@ -16,7 +16,7 @@ namespace FinalProject
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
         // login button click event
         protected void Button1_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace FinalProject
                         Response.Write("<script>alert('Invalid credentials');</script>");
                     }
 
-
+                   
 
             }
             catch (Exception ex)
