@@ -12,7 +12,6 @@
 
 </asp:Content>
 
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
     <div class="card-body"">
@@ -22,36 +21,22 @@
                      <asp:Label ID="Label3" runat="server" Text="VLOG LIST" Font-Bold="true" Font-Size="xx-large"
                           CssClass="StrongText"></asp:Label>
                  </div>
-    
             </div>
         </div>  
 
-
-
-
         <div class="row" style="display:flex; flex-direction:row; flex-wrap:wrap;">
 <asp:Repeater ID="vlog_upload" runat="server"  >
-
     
   <ItemTemplate>
 
-
-
-
-
      <div class="col-sm-4" style="padding:20px">
-
-
       <div class="card">
-
       
 <video id="player" controls>
   <source src='<%# Eval("vlog_link")  %>' type="video/mp4" />
 </video>
  
-        
-     
-        
+       
         <div class="card_content">
              <header class="flex items-center justify-between leading-tight p-2 md:p-4">
           <h2 class="card_title">
@@ -79,8 +64,6 @@
 <%--          <button class="btn card_btn">Read More</button>--%>
         </div>
       </div>
-  
-         
 
  <%--        <div style="text-align: center; width: inherit; height: 70px;">
 
