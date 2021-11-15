@@ -134,6 +134,10 @@ namespace FinalProject
             {
                 Response.Redirect("AdminMemberManagment.aspx");
             }
+            else if (Session["role"].Equals("Member"))
+            {
+                Response.Redirect("UserProfile.aspx");
+            }
             else
             {
                 Response.Redirect("HomePage.aspx");

@@ -38,7 +38,7 @@ namespace FinalProject
                     Session["role"] = "Member";
                     Response.Write("<script>alert('Login Successful');window.location='HomePage.aspx';</Script>");
                  
-                    Response.Redirect("HomePage.aspx");
+                    Response.Redirect("UserProfile.aspx");
                 }
                 else
                 {
