@@ -84,9 +84,11 @@
     <Content Include="bootstrap\js\jquery.js" />
     <Content Include="bootstrap\js\jquery.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="bootstrap\js\success.js" />
     <Content Include="css\CustomStyleSheet.css" />
     <Content Include="css\homepage.css" />
     <Content Include="css\master.css" />
+    <Content Include="css\signup.css" />
     <Content Include="css\userlogin.css" />
     <Content Include="css\viewvlogs.css" />
     <Content Include="DataTable\css\jquery.dataTables.min.css" />

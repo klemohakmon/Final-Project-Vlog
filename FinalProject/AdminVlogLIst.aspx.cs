@@ -21,6 +21,32 @@ namespace FinalProject
             GridView1.DataBind();
         }
 
+        protected void UpdateData()
+        {
+
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("select * from vlog_upload where  User_id=" + Session["User_id"], con);
+                DataTable Dt = new DataTable();
+                SqlDataAdapter Da = new SqlDataAdapter(cmd);
+                Da.Fill(Dt);
+                con.Close();
+                GridView1.DataSource = Dt;
+                GridView1.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+
+        }
+
         // go button click
         protected void Button4_Click(object sender, EventArgs e)
         {
@@ -43,6 +69,7 @@ namespace FinalProject
         protected void Button3_Click(object sender, EventArgs e)
         {
             updateVlogByID();
+            //UpdateData();
         }
         // Delete button click
         protected void Button1_Click(object sender, EventArgs e)
@@ -119,13 +146,14 @@ namespace FinalProject
                     cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
                     cmd.Parameters.AddWithValue("@category", categories);
                     cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
-                    cmd.Parameters.AddWithValue("@vlog_link", filepath);
+                    cmd.Parameters.AddWithValue("@vlog_link", filepath+"");
 
 
                     cmd.ExecuteNonQuery();
-                    con.Close();
-                    GridView1.DataBind();
-                    Response.Write("<script>alert('Vlog Updated successfully');</script>");
+                    con.Close();                   
+                    UpdateData();                  
+                    //GridView1.DataBind();
+                    //Response.Write("<script>alert('Vlog Updated successfully');</script>");
                 }
                 catch (Exception ex)
                 {

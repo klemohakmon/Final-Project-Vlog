@@ -21,16 +21,21 @@ namespace FinalProject
         // sign up button click event
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             if (checkMemberExsists())
             {
-                Response.Write("<script>alert('Member Already Exist with this Member ID, Pls try other ID ');</script>");
+                String strScript = "window.onload = function() { Worng();};";
+                ClientScript.RegisterStartupScript(this.GetType(), "Worng", strScript, true);
             }
             else
             {
-                signUpNewMember();               
-            }            
+                signUpNewMember();
+                String strScript = "window.onload = function() { Message();};";
+                ClientScript.RegisterStartupScript(this.GetType(), "Message", strScript, true);
+            }
+
         }
-          //user defined method
+        //user defined method
         bool checkMemberExsists() 
         {
             try
