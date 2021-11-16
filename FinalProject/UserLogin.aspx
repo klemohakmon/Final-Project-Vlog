@@ -15,11 +15,11 @@
 <div class="col-5 col-lg-7 mx-auto mb-5 mb-lg-0">
 
 <div class="pr-lg-5">
-<img src="images/vlog11.jpg" alt="" class="img-fluid" />
+<img src="https://cdn.dribbble.com/users/891406/screenshots/2661762/casey-neistat2.gif" alt="" class="img-fluid" />
 </div>
 </div>
 <div class="col-lg-5 px-lg-4">
-
+<h1 class="text-base text-primary text-uppercase mb-4">Login Here</h1>
 <h2 class="mb-4">Welcome Back!</h2>
 
 <div class ="form-group mb-4">
@@ -36,7 +36,7 @@
 <asp:CheckBox Text="&nbsp&nbsp&nbspRemember Me" runat="server" />
 </div>
 </div>
-<asp:Button Text="Login" CssClass="btn btn-primary" Height="50px" Width="400px" runat="server" OnClick="Button1_Click"/>
+<asp:Button Text="LOGIN" CssClass="btn btn-primary" Height="50px" Width="400px" runat="server" OnClick="Button1_Click"/>
 </div>
 </div>
 
