@@ -81,35 +81,7 @@ namespace FinalProject
 
         //user definde functions
 
-        void deleteVlogByID()
-        {
-            if (checkIfVlogExists())
-            {
-                try
-                {
-                    SqlConnection con = new SqlConnection(strcon);
-                    if (con.State == ConnectionState.Closed)
-                    {
-                        con.Open();
-                    }
-
-                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "' And User_id=" + Session["User_id"], con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    UpdateData();
-                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
-                   
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("<script>alert('" + ex.Message + "');</script>");
-                }
-            }
-            else
-            {
-                Response.Write("<script>alert('Invalid Member ID');</script>");
-            }
-        }
+       
         void updateVlogByID()
         {
             if (checkIfVlogExists())
@@ -165,6 +137,35 @@ namespace FinalProject
             else
             {
                 Response.Write("<script>alert('Invalid Vlog ID');</script>");
+            }
+        }
+        void deleteVlogByID()
+        {
+            if (checkIfVlogExists())
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "' And User_id=" + Session["User_id"], con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    UpdateData();
+                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Invalid Member ID');</script>");
             }
         }
 

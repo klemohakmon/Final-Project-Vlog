@@ -69,7 +69,7 @@ namespace FinalProject
         protected void Button3_Click(object sender, EventArgs e)
         {
             updateVlogByID();
-            //UpdateData();
+           // UpdateData();
         }
         // Delete button click
         protected void Button1_Click(object sender, EventArgs e)
@@ -79,34 +79,7 @@ namespace FinalProject
 
         //user definde functions
 
-        void deleteVlogByID()
-        {
-            if (checkIfVlogExists())
-            {
-                try
-                {
-                    SqlConnection con = new SqlConnection(strcon);
-                    if (con.State == ConnectionState.Closed)
-                    {
-                        con.Open();
-                    }
-
-                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "'", con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
-                    GridView1.DataBind();
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("<script>alert('" + ex.Message + "');</script>");
-                }
-            }
-            else
-            {
-                Response.Write("<script>alert('Invalid Member ID');</script>");
-            }
-        }
+        
         void updateVlogByID()
         {
             if (checkIfVlogExists())
@@ -140,7 +113,7 @@ namespace FinalProject
                     {
                         con.Open();
                     }
-                    SqlCommand cmd = new SqlCommand("UPDATE vlog_upload set vlog_name=@vlog_name, language=@language, category=@category,vlog_description=@vlog_description, vlog_link=@vlog_link'" + TextBox1.Text.Trim() + "';", con);
+                    SqlCommand cmd = new SqlCommand("UPDATE vlog_upload set vlog_name=@vlog_name, language=@language, category=@category,vlog_description=@vlog_description, vlog_link=@vlog_link where vlog_id=" + TextBox1.Text.Trim() + " and  User_id=" + Session["User_id"], con);
 
                     cmd.Parameters.AddWithValue("@vlog_name", TextBox2.Text.Trim());
                     cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
@@ -151,8 +124,8 @@ namespace FinalProject
 
                     cmd.ExecuteNonQuery();
                     con.Close();                   
-                    UpdateData();                  
-                    //GridView1.DataBind();
+                   // UpdateData();                  
+                   // GridView1.DataBind();
                     //Response.Write("<script>alert('Vlog Updated successfully');</script>");
                 }
                 catch (Exception ex)
@@ -163,6 +136,34 @@ namespace FinalProject
             else
             {
                 Response.Write("<script>alert('Invalid Vlog ID');</script>");
+            }
+        }
+        void deleteVlogByID()
+        {
+            if (checkIfVlogExists())
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "'", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
+                    GridView1.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Invalid Member ID');</script>");
             }
         }
 
