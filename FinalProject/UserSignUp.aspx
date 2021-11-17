@@ -41,8 +41,8 @@
 </div>
 </div>
 <div class="col-lg-5 px-lg-4">
-<h1 class="text-base text-primary text-uppercase mb-4">Wellcome</h1>
-<h2 class="mb-4">Sign up Here</h2>
+<%--<h1 class="text-base text-primary text-uppercase mb-4">Wellcome</h1>--%>
+<h2 class="mb-4">Sign Up Here</h2>
 
 <div class ="form-group mb-4">
 <asp:TextBox ID="TextBox1" required= "true" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="Full Name" runat="server" ></asp:TextBox>
