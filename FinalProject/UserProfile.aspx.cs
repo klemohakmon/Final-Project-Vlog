@@ -25,7 +25,7 @@ namespace FinalProject
          // update button click
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         // user defined function
