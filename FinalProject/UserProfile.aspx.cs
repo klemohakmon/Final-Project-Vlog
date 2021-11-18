@@ -26,6 +26,7 @@ namespace FinalProject
         protected void Button1_Click(object sender, EventArgs e)
         {
             UpdateData();
+            upDateDataBottun();
         }
 
         // user defined function
@@ -74,7 +75,35 @@ namespace FinalProject
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
+        }
+        void upDateDataBottun()
+        {
+            try
+            {
 
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("UPDATE members_tbl set full_name=@full_name,where User_id="+ Session["User_id"], con);
+
+                cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
+               // cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
+                
+              // cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
+                
+
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                UpdateData();
+                // Response.Write("<script>alert('Vlog Updated successfully');</script>");
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
         }
 
         void getMemberByID()
@@ -113,10 +142,7 @@ namespace FinalProject
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-
-
        
-
 
        
     }
