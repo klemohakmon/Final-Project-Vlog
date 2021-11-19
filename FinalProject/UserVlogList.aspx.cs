@@ -18,11 +18,12 @@ namespace FinalProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-
+            
+                getUserData();
                 UpdateData();
-            }
+            getvlogData();
+
+
         }
         protected void UpdateData()
         {
@@ -35,7 +36,7 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("select * from vlog_upload where  User_id=" + Session["User_id"], con);
+                SqlCommand cmd = new SqlCommand("select * from vlog_upload where User_id=" + Session["User_id"], con);
                 DataTable Dt = new DataTable();
                 SqlDataAdapter Da = new SqlDataAdapter(cmd);
                 Da.Fill(Dt);
@@ -50,12 +51,12 @@ namespace FinalProject
           
         }
 
-        // go button click
+       
         protected void Button4_Click(object sender, EventArgs e)
         {
             getVlogByID();
         }
-        // Add button click
+       
         protected void Button2_Click(object sender, EventArgs e)
         {
             if (checkIfVlogExists())
@@ -68,20 +69,47 @@ namespace FinalProject
             }
 
         }
-        // Update button click
+       
         protected void Button3_Click(object sender, EventArgs e)
         {
             updateVlogByID();
         }
-        // Delete button click
+        
         protected void Button1_Click(object sender, EventArgs e)
         {
             deleteVlogByID();
         }
 
-        //user definde functions
+    
+        void deleteVlogByID()
+        {
+            if (checkIfVlogExists())
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
 
-       
+                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "' And User_id=" + Session["User_id"], con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    UpdateData();
+                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
+                   
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Invalid Member ID');</script>");
+            }
+        }
         void updateVlogByID()
         {
             if (checkIfVlogExists())
@@ -137,35 +165,6 @@ namespace FinalProject
             else
             {
                 Response.Write("<script>alert('Invalid Vlog ID');</script>");
-            }
-        }
-        void deleteVlogByID()
-        {
-            if (checkIfVlogExists())
-            {
-                try
-                {
-                    SqlConnection con = new SqlConnection(strcon);
-                    if (con.State == ConnectionState.Closed)
-                    {
-                        con.Open();
-                    }
-
-                    SqlCommand cmd = new SqlCommand("DELETE from vlog_upload where vlog_id ='" + TextBox1.Text.Trim() + "' And User_id=" + Session["User_id"], con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    UpdateData();
-                    Response.Write("<script>alert('Vlog Delete Succesfully');</script>");
-
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("<script>alert('" + ex.Message + "');</script>");
-                }
-            }
-            else
-            {
-                Response.Write("<script>alert('Invalid Member ID');</script>");
             }
         }
 
@@ -280,6 +279,7 @@ namespace FinalProject
                 con.Close();
                 Response.Write("<script>alert('Vlog added successfully.');</script>");
                 GridView1.DataBind();
+                Page.Response.Redirect(Page.Request.Url.ToString(), true);
             }
             catch (Exception ex)
             {
@@ -288,6 +288,51 @@ namespace FinalProject
             }
         }
 
+        void getUserData()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where User_id = '" + Session["User_id"] + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                members_tbl.DataSource = dt;
+                members_tbl.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
+
+        void getvlogData()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * from vlog_upload where User_id = '" + Session["User_id"] + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                vlog_upload.DataSource = dt;
+                vlog_upload.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
