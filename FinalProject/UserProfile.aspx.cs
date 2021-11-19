@@ -25,8 +25,9 @@ namespace FinalProject
          // update button click
         protected void Button1_Click(object sender, EventArgs e)
         {
-            UpdateData();
+            
             upDateDataBottun();
+            UpdateData();
         }
 
         // user defined function
@@ -97,7 +98,7 @@ namespace FinalProject
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                UpdateData();
+               // UpdateData();
                 // Response.Write("<script>alert('Vlog Updated successfully');</script>");
             }
             catch (Exception ex)

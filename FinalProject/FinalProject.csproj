@@ -85,6 +85,7 @@
     <Content Include="bootstrap\js\jquery.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="bootstrap\js\success.js" />
+    <Content Include="css\adminlogin.css" />
     <Content Include="css\CustomStyleSheet.css" />
     <Content Include="css\homepage.css" />
     <Content Include="css\master.css" />
