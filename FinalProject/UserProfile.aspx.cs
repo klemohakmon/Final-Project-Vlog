@@ -19,15 +19,13 @@ namespace FinalProject
             {
                 getMemberByID();
                 UpdateData();
-               //getUserData();
+                getUserData();
             }
         }
-         // update button click
+        // update button click
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            upDateDataBottun();
-            UpdateData();
+            updateUserPersonalDetails();
         }
 
         // user defined function
@@ -40,17 +38,17 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where member_id = '" + Session["user_id"].ToString() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where User_id = '" + Session["User_id"] + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                members_tbl.DataSource = dt;
+                members_tbl.DataBind();
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
-               
+
             }
         }
         protected void UpdateData()
@@ -64,48 +62,69 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("select * from vlog_upload where  User_id=" + Session["User_id"], con);
+                SqlCommand cmd = new SqlCommand("select * from members_tbl where User_id=" + Session["User_id"], con);
                 DataTable Dt = new DataTable();
                 SqlDataAdapter Da = new SqlDataAdapter(cmd);
                 Da.Fill(Dt);
                 con.Close();
-                GridView1.DataSource = Dt;
-                GridView1.DataBind();
+                members_tbl.DataSource = Dt;
+                members_tbl.DataBind();
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
+
         }
-        void upDateDataBottun()
+
+
+
+        void updateUserPersonalDetails()
         {
+            string password = "";
+            if (TextBox10.Text.Trim() == "")
+            {
+                password = TextBox9.Text.Trim();
+            }
+            else
+            {
+                password = TextBox10.Text.Trim();
+            }
             try
             {
-
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("UPDATE members_tbl set full_name=@full_name,where User_id="+ Session["User_id"], con);
+
+
+                SqlCommand cmd = new SqlCommand("update members_tbl set full_name=@full_name, dob=@dob, contact_no=@contact_no, email=@email, state=@state, city=@city, pincode=@pincode, full_address=@full_address, password=@password where member_id='" + TextBox1.Text.Trim() + " and User_id=" + Session["User_id"], con);
 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
-               // cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
-                
-              // cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
-                
-
+                cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
+                cmd.Parameters.AddWithValue("@contact_no", TextBox3.Text.Trim());
+                cmd.Parameters.AddWithValue("@email", TextBox4.Text.Trim());
+                cmd.Parameters.AddWithValue("@state", DropDownList1.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
+                cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
+                cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
+                cmd.Parameters.AddWithValue("@password", password);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-               // UpdateData();
-                // Response.Write("<script>alert('Vlog Updated successfully');</script>");
+                getUserData();
+                UpdateData();
+                Response.Write("<script>alert('Vlog Updated successfully');</script>");
+
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
+
 
         void getMemberByID()
         {
@@ -116,7 +135,7 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where User_id = '" + Session["User_id"].ToString() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where User_id = '" + Session["User_id"] + "';", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -143,8 +162,6 @@ namespace FinalProject
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-       
 
-       
     }
 }

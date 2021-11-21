@@ -1,27 +1,4 @@
-﻿html, body {
-    margin: 0;
-
-    height: 100%;
-    width: 100%;
-}
-
-* {
-    font-family: sans-serif;
-    color: #444;
-}
-
-a {
-    padding: 3rem;
-    font-size: larger;
-    text-decoration: none;
-}
-
-ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
+﻿
 .menu {
 
     box-sizing: border-box;
@@ -70,7 +47,7 @@ ul, li {
                 left: 0;
                 height: 100%;
                 width: 100%;
-                transform: scale(1);
+                transform: scaley(.1);
                 transform-origin: top;
                 transition: all 0.5s ease 0s;
                 -webkit-transition: all 0.5s cubic-bezier(.75,-0.5,0,1.75) 0s;
@@ -78,7 +55,7 @@ ul, li {
             }
 
             .menu-items .nav-link a:hover:after {
-                transform: scale(1);
+                transform: scaley(1);
             }
 
         .menu-items .nav-link:first-child a:after {
@@ -446,7 +423,7 @@ button {
 
 .container {
     margin: auto;
-    max-width: 960px;
+
     width: 90%;
 }
 /* - */
@@ -634,7 +611,7 @@ header > .container {
                 margin-right: 30px;
                 border: none;
                 box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
-               /* webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);*/
+                webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
                 -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
             }
 

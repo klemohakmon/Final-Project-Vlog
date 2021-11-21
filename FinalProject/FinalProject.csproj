@@ -91,6 +91,7 @@
     <Content Include="css\master.css" />
     <Content Include="css\signup.css" />
     <Content Include="css\userlogin.css" />
+    <Content Include="css\userprofile.css" />
     <Content Include="css\uservloglist.css" />
     <Content Include="css\viewvlogs.css" />
     <Content Include="DataTable\css\jquery.dataTables.min.css" />
