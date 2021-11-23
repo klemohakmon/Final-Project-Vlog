@@ -1,104 +1,310 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="AdminVlogLIst.aspx.cs" Inherits="FinalProject.AdminVlogLIst" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script type="text/javascript">
-         <%--JQuary for the search--%>
-          $(document).ready(function() {
-         $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable(); 
-        });
-         
-        // function for display the image
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+<link href="css/adminvloglist.css" rel="stylesheet" />
+        <link href="css/uservloglist.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-                //reader.onload = function (e) {
-                //    $('#imgview').attr('src', e.target.result);
-                //};
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+           });
+           function readURL(input) {
+               if (input.files && input.files[0]) {
+                   var reader = new FileReader();
 
-    </script>
+                   reader.readAsDataURL(input.files[0]);
+               }
+           }
+
+       </script>
+
+
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+          
+      
+    <div class="wrapper">
+    <div class="container">
 
-  <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body"> 
-                        <div class="row text-center">
-                            <div class="col">
-                                <h4>Vlog Details</h4>
-                            </div>
-                        </div>
+        <div class="wraper">
 
-                        <div class="row text-center">
-                            <div class="col">
+             
+                    <center>
+<img src="https://i.pinimg.com/originals/0c/cd/96/0ccd96bc52dc46b1f5f3ea89cad58ecb.gif" class="img-fluid" alt="profile-image">
+                    </center>
+                     
 
-                                <img id="imgview" height="150" width="100" src="Vlog_inventory/vlog8.jpg"/>
-                            </div>
-                        </div>
+            <div class="row user-tabs">
+                <div class="col-lg-6 col-md-9 col-sm-9">
+                                          <div class="indicator" style="right: 476px; left: 0px;"></div>
+                        <div class="indicator" style="right: 476px; left: 0px;"></div>
+                    <ul class="nav nav-tabs tabs" id="myTab" style="width: 100%;">
+                        <li class="active tab" style="width: 25%;">
+                            <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active">
+                                <span class="visible-xs"><i class="fa fa-home"></i></span>
+                                <span class="hidden-xs">Vlogs List</span>
+                            </a>
+                        </li>
+                        <li class="tab" style="width: 25%;">
+                            <a href="#profile-2" data-toggle="tab" aria-expanded="false">
+                                <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                <span class="hidden-xs">Members</span>
+                            </a>
+                        </li>
+                        <li class="tab" style="width: 25%;">
+                            <a href="#messages-2" data-toggle="tab" aria-expanded="true">
+                                <span class="visible-xs"><i class="fa fa-video"></i></span>
+                                <span class="hidden-xs">All Videos</span>
+                            </a>
+                        </li>
+                        <li class="tab" style="width: 25%;">
+                            <a href="#settings-2" data-toggle="tab" aria-expanded="false">
+                                <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                                <span class="hidden-xs">Video Management</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                        <div class="row">
-                            <div class="col">
-                                <hr>
-                            </div>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
 
-                         <div class="row">
-                            <div class="col">
-                                <asp:FileUpload onchange="readURL(this);" CssClass="form-control" ID="FileUpload1" runat="server" />
-                            </div>
-                        </div>
+                    <div class="tab-content profile-tab-content">
 
-                        <div class="row">
+                        <div class="tab-pane active" id="home-2">
+                            <div class="row">
 
-                             <div class="col-md-4">
-                                <label>Vlog ID</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-  
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" 
-                                runat="server" placeholder="Vlog ID" ></asp:TextBox>
-                                        <asp:Button class="btn btn-primary" ID="Button4" runat="server" Text="Go" OnClick="Button4_Click" />
-                                </div>
-                            </div>
-                         </div>
+    <div class="col-md-12">
+        <div class="card">
+           <div class="table-responsive">
+               <table class="table no-wrap user-table mb-0">
 
-                            <div class="col-md-8">
-                                <label>Vlog Name</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" 
-                                        runat="server" placeholder="Vlog Name"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="border-0 text-uppercase font-medium pl-4">ID</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">Description</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">Date Uploaded</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">Category</th>
 
-                         <div class="row">
-                           <div class="col-md-4">
-                                <label>Language</label>
-                                <div class="form-group">
-                                    <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
-                                        <asp:ListItem Text="English"  Value="English"/>
-                                          <asp:ListItem Text="Hebrew"  Value="Hebrew"/>
-                                          <asp:ListItem Text="Other"  Value="Other"/>
-                                    </asp:DropDownList>
-                                </div>
-                           </div>  
+                    </tr>
+                  </thead>
+
+ <asp:Repeater ID="vlog_upload" runat="server">    
+  <ItemTemplate>     
+           
+
+                  <tbody>
+                    <tr>
+                      <td class="pl-4">     <asp:Label ID="label6" runat="server" Text='<%# Eval("vlog_id") %>'></asp:Label></td>
+                      <td>
+                          <h5 class="font-medium mb-0">  <asp:Label ID="label1" runat="server" Text='<%# Eval("vlog_name") %>'></asp:Label></h5>
+       
+                      </td>
+                      <td>
+                          <span class="text-muted">   <asp:Label ID="label2" runat="server" Text='<%# Eval("vlog_description") %>'></asp:Label></span><br>
+         
+                      </td>
+                      <td>
+                          <span class="text-muted">    <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label></span><br>
+
+                      </td>
+                      <td>
+                          <span class="text-muted">  <asp:Label ID="label5" runat="server" Text='<%# Eval("language") %>'></asp:Label></span><br>
+ 
+                      </td>
+                      <td>
                         
-                             <div class="col-md-4">
-                                  <label>Vlog Date Upload</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server"
-                                      placeholder="Vlog Date Upload" TextMode="Date"></asp:TextBox>
+                            <asp:Label ID="label4" runat="server" Text='<%# Eval("category") %>'></asp:Label>
+                     
+                      </td>
+<%--                      <td>
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button>
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button>
+                      </td>--%>
+                    </tr>
+  
+
+                  </tbody>
+              
+          
+
+  </ItemTemplate>
+</asp:Repeater>
+  </table>
+  </div>
+        </div>
+    </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="profile-2">
+                            
+                            <div class="panel panel-default panel-fill">
+
+                                <div class="panel-body">
+                                    
+<!-- start -->           
+                                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+
+       <asp:Repeater ID="members_tbl" runat="server">
+        <ItemTemplate>
+
+<div class="member-entry"> 
+    <a href="AdminMemberManagment.aspx" class="member-img"> 
+        <img src="https://i.pinimg.com/originals/19/00/54/19005430985f1e7e4022b4301b44ba35.gif" class="img-fluid"> 
+     
+    </a> 
+    <div class="member-details"> 
+        <h4> 
+            <asp:Label ID="label8" CssClass="list-details" runat="server" Text='<%# Eval("full_name") %>'></asp:Label>
+        </h4> 
+        <div class="row info-list"> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-id-card-o"></i>
+                   <asp:Label ID="label7" CssClass="list-details" runat="server" Text='<%# Eval("member_id") %>'></asp:Label>
+            </div> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-map-marker"></i> 
+           <asp:Label ID="label12" CssClass="list-details" runat="server" Text='<%# Eval("city") %>'></asp:Label>
+            </div> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-globe"></i> 
+               <asp:Label ID="label11" CssClass="list-details" runat="server" Text='<%# Eval("state") %>'></asp:Label> 
+            </div> 
+            <div class="clear"></div> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-phone"></i> 
+                 <asp:Label ID="label10" CssClass="list-details" runat="server" Text='<%# Eval("contact_no") %>'></asp:Label>
+            </div> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-envelope"></i> 
+                <asp:Label ID="label9" CssClass="list-details" runat="server" Text='<%# Eval("email") %>'></asp:Label>
+            </div> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-birthday-cake"></i> 
+              <asp:Label ID="label13" CssClass="list-details" runat="server" Text='<%# Eval("dob") %>'></asp:Label>
+            </div> 
+        </div> 
+    </div> 
+</div>
+
+            </ItemTemplate>
+                  </asp:Repeater>
+
+
+
+
+</div>
+
+ <!-- end -->
+
+
+
+
+
+
+
+
+
                                 </div>
                             </div>
-                  
-                            <div class="col-md-4">
-                                <label>Category</label>
-                                <div class="form-group">
-                                    <asp:ListBox  CssClass="form-control" ID="ListBox1" runat="server" Rows="5" SelectionMode="Multiple">
+                            <!-- Personal-Information -->
+                        </div>
+
+                        <div class="tab-pane" id="messages-2">
+           
+                            <div class="panel panel-default panel-fill">
+
+                                <div class="panel-body">
+                              
+
+ <div class="card-body"">
+        <div class="row no-gutters" style="display:flex; flex-direction:row; flex-wrap:wrap;">
+
+ 
+                                        <asp:Repeater ID="GridView2" runat="server">
+                   
+    
+                                            <ItemTemplate>
+
+                                                <div class="col-xs-12 col-sm-6">
+                                               
+
+<%--                                                <div class="videoWrapper">
+  <!-- Copy & Pasted from YouTube -->
+  <iframe width="560" height="349" src='<%# Eval("vlog_link")  %>' frameborder="0" allowfullscreen></iframe>
+</div>--%>
+
+
+                                                    	<div class="box rte">
+		<h2 class="boxHeadline">  <asp:Label ID="Label2" runat="server" Text='<%# Eval("vlog_name") %>' ></asp:Label></h2>
+		<h3 class="boxHeadlineSub"><asp:Label ID="Label3" runat="server" Text='<%# Eval("vlog_date_upload", "{0: dd/MM/yyyy}") %>'></asp:Label></h3>
+<div class="videoWrapper">
+		<iframe width=100 height="281" src='<%# Eval("vlog_link")  %>' frameborder="0" allowfullscreen></iframe>
+    </div>
+	</div>
+                
+</div>
+</ItemTemplate>
+</asp:Repeater>
+</div>
+</div>
+    
+
+                                </div>
+                            </div>
+                     
+                        </div>
+
+                        <div class="tab-pane" id="settings-2">
+                        
+                            <div class="panel panel-default panel-fill">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Edit Profile</h3>
+                                </div>
+                                <div class="panel-body">
+                                  
+                                        <div class="form-group">
+                                       <asp:FileUpload CssClass="custom-file" onchange="readURL(this);" ID="FileUpload1" runat="server"/>
+                                        <div class="input-group">
+                                          
+                                                  <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ID"></asp:TextBox>
+                                   
+                                              <asp:Button class="btn btn-outline-warning" ID="Button1" runat="server" Text="ENTER" OnClick="Button4_Click"/>
+                                           
+                                    </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                                                                
+                                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Vlog Name"></asp:TextBox>
+
+                                        </div>
+                                        <div class="form-group">                                  
+                 
+                                            <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
+                                       
+                                                <asp:ListItem Text="English"  Value="English"/>
+                                         
+                                                <asp:ListItem Text="Hebrew"  Value="Hebrew"/>
+                                          
+                                                <asp:ListItem Text="Other"  Value="Other"/>
+                                  
+                                                </asp:DropDownList>
+
+                                        </div>
+                                        <div class="form-group">
+                                        <asp:ListBox  CssClass="form-control" ID="ListBox1" runat="server" Rows="5" SelectionMode="Multiple">
                                         <asp:ListItem Text="Action" Value="Action"/>
                                         <asp:ListItem Text="Fun" Value="Fun"/>
                                         <asp:ListItem Text="Cooking" Value="Cooking"/>
@@ -120,126 +326,67 @@
                                         <asp:ListItem Text="Travel" Value="Travel"/>
                                         <asp:ListItem Text="Animals" Value="Animals"/>
                                     </asp:ListBox>
-                                </div>
-                            </div>
-                         </div>                                          
-                                        
-                        <div class="row">
-                            <div class="col-12">
-                                <label>Full Description</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server"
-                                      placeholder="Write a few words describing the video" TextMode="MultiLine" Rows="2"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                             <div class="col-4">                                                     
-                                     <asp:Button class="btn btn-block btn-success"
+                                        </div>
+                                        <div class="form-group">
+                                             <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Write a few words describing the video" TextMode="MultiLine"></asp:TextBox>
+
+                                        </div>
+                                        <div class="form-group">
+                                              <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Vlog Date Upload" TextMode="Date"></asp:TextBox>
+
+                                        </div>
+
+
+                                                                <div class="row">
+
+                             <%--<div class="col-4">                                                     
+                                     <asp:Button class="button1"
                                          ID="Button2" runat="server" Text="Add" OnClick="Button2_Click" />                                 
-                           </div>
+                           </div>--%>
                              <div class="col-4">                                                     
-                                     <asp:Button class="btn btn-block btn-warning"
-                                         ID="Button3" runat="server" Text="Update" OnClick="Button3_Click" />                                 
+                                     <asp:Button class="button2"
+                                         ID="Button3" runat="server" Text="Update" OnClick="Button3_Click"/>                                 
                            </div>
                             <div class="col-4">                                                     
-                                     <asp:Button class="btn btn-block btn-danger"
-                                         ID="Button1" runat="server" Text="Delete" OnClick="Button1_Click" />                                 
+                                     <asp:Button class="button3"
+                                         ID="Button8" runat="server" Text="Delete" OnClick="Button1_Click"/>                                 
                            </div>
                           
-                        </div>                        
-                    </div>
-                </div> 
-                <a href="HomePage.aspx"><< Back To Home</a><br />
-                            <br />
-              </div>  
-            
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">   
-                        <div class="row text-center">
-                            <div class="col">
-                                <h4>Vlog List</h4>
+                        </div>  
+
+                             
+                                  
+
+                                </div>
                             </div>
-                        </div>
-
-                         <div class="row">
-                            <div class="col">
-                                <hr />
-                            </div>
-                         </div>
-                       
-                        <div class="row">
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=Klemo-Hakmon\SQLEXPRESS;Initial Catalog=VlogDB;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [vlog_upload]"></asp:SqlDataSource>
-                            <div class="col">
-                                <asp:GridView class="table table-striped table-bordered" ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="vlog_id" DataSourceID="SqlDataSource1" >
-                                    <Columns>
-                                        <asp:BoundField DataField="vlog_id" HeaderText="ID" ReadOnly="True" SortExpression="vlog_id" >
-                                        <FooterStyle Font-Bold="False" />
-                                        <ItemStyle Font-Bold="True" />
-                                        </asp:BoundField>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <div class="container-fluid">
-                                                    <div class="row">   
-                                                        <div class="col-lg-10">
-                                                            <div class="row"> 
-                                                               <div class="col-12">
-                                                                   <asp:Label ID="Label1" runat="server" Text='<%# Eval("vlog_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
-                                                               </div>
-                                                            </div>
-
-                                                             <div class="row"> 
-                                                               <div class="col-12">
-
-                                                                   <label>
-                                                                   Language -</label><asp:Label ID="Label2" runat="server" Text='<%# Eval("language") %>' Font-Bold="True"></asp:Label>
-                                                                   &nbsp;|
-                                                                   <label>
-                                                                   Category</label> -<asp:Label ID="Label3" runat="server" Text='<%# Eval("category") %>' Font-Bold="True"></asp:Label>
-                                                                   &nbsp;</div>
-                                                            </div>
-
-                                                             <div class="row"> 
-                                                               <div class="col-12">
-                                                                   <label>
-                                                                   Vlog Date Upload -
-                                                                   </label>
-                                                                   <asp:Label ID="Label4" runat="server" Text='<%# Eval("vlog_date_upload") %>' Font-Bold="True"></asp:Label>
-                                                                   &nbsp;|
-                                                               </div>
-                                                            </div>
-
-                                                             <div class="row"> 
-                                                               <div class="col-12">
-
-                                                                   Description -
-                                                                   <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("vlog_description") %>'></asp:Label>
-
-                                                               </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-lg-2">    
-                                                            <video width="320" height="240" controls>
-                                                                              <source src="<%# Eval("vlog_link") %>" type="video/mp4">
-                                                                              
-                                                                            
-                                                                            </video>
-                                                           <%-- <asp:Image CssClass="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("vlog_link") %>' />--%>
-                                                        </div>
-                                                    </div>                                                
-                                                </div>
-                                            </ItemTemplate>
-                                        </asp:TemplateField>                              
-                                    </Columns>
-                                </asp:GridView>
-                            </div>
-                        </div>
+                                                 
                      </div>
-                  </div>
-                 </div>
-               </div>  
-             </div>     
+
+                        
+
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end wrapper -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
 </asp:Content>
