@@ -12,7 +12,6 @@ namespace FinalProject
 {
     public partial class Sign_Up : System.Web.UI.Page
     {
-
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +20,6 @@ namespace FinalProject
         // sign up button click event
         protected void Button1_Click(object sender, EventArgs e)
         {
-
             if (checkMemberExsists())
             {
                 String strScript = "window.onload = function() { Worng();};";
@@ -33,7 +31,6 @@ namespace FinalProject
                 String strScript = "window.onload = function() { Message();};";
                 ClientScript.RegisterStartupScript(this.GetType(), "Message", strScript, true);
             }
-
         }
         //user defined method
         bool checkMemberExsists() 
@@ -76,8 +73,7 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO members_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,role) values (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,'member') ", con);
-                
+                SqlCommand cmd = new SqlCommand("INSERT INTO members_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,role) values (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,'member') ", con);              
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@contact_no", TextBox3.Text.Trim());
@@ -87,9 +83,7 @@ namespace FinalProject
                 cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
                 cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@member_id", TextBox8.Text.Trim());
-                cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());
-           
-
+                cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());          
                 cmd.ExecuteNonQuery();
                 con.Close();
                

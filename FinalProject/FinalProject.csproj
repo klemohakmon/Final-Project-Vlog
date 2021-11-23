@@ -1759,7 +1759,6 @@
     <Content Include="images\vlog6.jpg" />
     <Content Include="images\vlog7.jpg" />
     <Content Include="css\StyleSheetUserSignUpNew.css" />
-    <Content Include="UserSignUpNew.aspx" />
     <Content Include="UserVlogList.aspx" />
     <Content Include="Vlog_inventory\vlog8.jpg" />
     <Content Include="images\vlog9.jpg" />
@@ -1826,13 +1825,6 @@
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserSignUpNew.aspx.cs">
-      <DependentUpon>UserSignUpNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserSignUpNew.aspx.designer.cs">
-      <DependentUpon>UserSignUpNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserVlogList.aspx.cs">
       <DependentUpon>UserVlogList.aspx</DependentUpon>

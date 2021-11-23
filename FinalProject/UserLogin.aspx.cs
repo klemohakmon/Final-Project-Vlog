@@ -10,7 +10,6 @@ using System.Web.UI.WebControls;
 
 namespace FinalProject
 {
-
     public partial class UserLogin : System.Web.UI.Page
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
@@ -28,7 +27,7 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where member_id = '" + TextBox1.Text.Trim() + "' AND password ='" +TextBox2.Text.Trim() +"'", con); ;
+                SqlCommand cmd = new SqlCommand("SELECT * from members_tbl where member_id = '" + TextBox1.Text.Trim() + "' AND password ='" +TextBox2.Text.Trim() +"'", con); 
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -44,17 +43,12 @@ namespace FinalProject
                 {
                     Response.Write("<script>alert('Invalid credentials');</script>");
                 }
-
-
-
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
 
-            }
-            //Response.Write("<script>alert('Bottun click');</script>");
-
+            }     
         }
     }
 }
