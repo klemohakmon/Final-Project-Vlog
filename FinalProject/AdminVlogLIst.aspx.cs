@@ -25,7 +25,6 @@ namespace FinalProject
             getvlogvideos();
 
         }
-
         protected void UpdateData()
         {
 
@@ -51,26 +50,11 @@ namespace FinalProject
             }
 
         }
-
-
         protected void Button4_Click(object sender, EventArgs e)
         {
             getVlogByID();
 
         }
-
-        //protected void Button2_Click(object sender, EventArgs e)
-        //{
-        //    if (checkIfVlogExists())
-        //    {
-        //        Response.Write("<script>alert('Vlog Already Exist, try some other Vlog ID');</script>");
-        //    }
-        //    else
-        //    {
-        //        addNewVlog();
-        //    }
-
-        //}
 
         protected void Button3_Click(object sender, EventArgs e)
         {
@@ -81,7 +65,6 @@ namespace FinalProject
         {
             deleteVlogByID();
         }
-
 
         void deleteVlogByID()
         {
@@ -247,50 +230,6 @@ namespace FinalProject
                 return false;
             }
         }
-
-        //void addNewVlog()
-        //{
-        //    try
-        //    {
-        //        string categories = ""; // this is for the Category to choose a fue categories
-        //        foreach (int i in ListBox1.GetSelectedIndices())
-        //        {
-        //            categories = categories + ListBox1.Items[i] + ",";
-        //        }
-        //        categories = categories.Remove(categories.Length - 1);
-
-        //        string filepath = "/Vlog_inventory/vlog8.jpg";
-        //        string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
-        //        FileUpload1.SaveAs(Server.MapPath("Vlog_inventory/" + filename));
-        //        filepath = "/Vlog_inventory/" + filename;
-
-        //        SqlConnection con = new SqlConnection(strcon);
-        //        if (con.State == ConnectionState.Closed)
-        //        {
-        //            con.Open();
-        //        }
-
-        //        SqlCommand cmd = new SqlCommand("INSERT INTO vlog_upload(vlog_id,vlog_name,language,vlog_date_upload,category,vlog_description,vlog_link,User_id) values (@vlog_id,@vlog_name,@language,@vlog_date_upload,@category,@vlog_description,@vlog_link,@User_id)", con);
-        //        cmd.Parameters.AddWithValue("@vlog_id", TextBox1.Text.Trim());
-        //        cmd.Parameters.AddWithValue("@vlog_name", TextBox2.Text.Trim());
-        //        cmd.Parameters.AddWithValue("@category", categories);
-        //        cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
-        //        cmd.Parameters.AddWithValue("@vlog_date_upload", TextBox3.Text.Trim());
-        //        cmd.Parameters.AddWithValue("@vlog_description", TextBox5.Text.Trim());
-        //        cmd.Parameters.AddWithValue("@vlog_link", filepath);
-        //        cmd.Parameters.AddWithValue("@User_id", Session["User_id"].ToString().Trim());
-        //        cmd.ExecuteNonQuery();
-        //        con.Close();
-        //        Response.Write("<script>alert('Vlog added successfully.');</script>");
-        //        GridView1.DataBind();
-        //        Page.Response.Redirect(Page.Request.Url.ToString(), true);
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        Response.Write("<script>alert('" + ex.Message + "');</script>");
-        //    }
-        //}
 
         void getUserData()
         {

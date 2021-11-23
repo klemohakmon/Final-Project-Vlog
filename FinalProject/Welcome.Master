@@ -57,7 +57,6 @@
     <ul class="menu-items">
 
 
-
                             <li class="nav-link">
                             <asp:LinkButton Class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View Vlogs
                             </asp:LinkButton>
@@ -73,8 +72,6 @@
                             </asp:LinkButton>
                         </li>
     </ul>
-
-
   </nav>
 
         <div>
@@ -82,12 +79,7 @@
              </asp:ContentPlaceHolder>
         </div>
 
-
       <footer>
-   <%-- <div class="container">
-      <div class="quick-links">
-        <p>Admin Services</p>
-        --%>
 
           <ul>
                             <li class="nav-link">
@@ -105,13 +97,8 @@
                                 <asp:LinkButton Class="nav-link" ID="LinkButton6" 
                           runat="server" OnClick="LinkButton6_Click">Admin Login</asp:LinkButton> 
                             </li>
-
- </ul>     
-
-     
+ </ul>          
   </footer>
-
-
 </form>
 </body>
 </html>

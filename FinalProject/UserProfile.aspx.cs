@@ -53,7 +53,6 @@ namespace FinalProject
         }
         protected void UpdateData()
         {
-
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -74,11 +73,7 @@ namespace FinalProject
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
-
         }
-
-
-
         void updateUserPersonalDetails()
         {
             string password = "";
@@ -97,8 +92,6 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-
-
                 SqlCommand cmd = new SqlCommand("update members_tbl set full_name=@full_name, dob=@dob, contact_no=@contact_no, email=@email, state=@state, city=@city, pincode=@pincode, full_address=@full_address, password=@password where member_id='" + TextBox1.Text.Trim() + " and User_id=" + Session["User_id"], con);
 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
@@ -123,9 +116,6 @@ namespace FinalProject
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-
-
-
         void getMemberByID()
         {
             try

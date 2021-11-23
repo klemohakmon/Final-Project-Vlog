@@ -6,9 +6,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-
-
-
 <div class=" page-holder d-flex align-items-center">
 <div class="container">
 <div class="row align-items-center py-5">

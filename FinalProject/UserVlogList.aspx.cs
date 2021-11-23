@@ -17,13 +17,10 @@ namespace FinalProject
         private string global_filepath;
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            
+        {       
                 getUserData();
                 UpdateData();
             getvlogData();
-
-
         }
         protected void UpdateData()
         {
@@ -79,8 +76,7 @@ namespace FinalProject
         {
             deleteVlogByID();
         }
-
-    
+ 
         void deleteVlogByID()
         {
             if (checkIfVlogExists())
@@ -155,7 +151,7 @@ namespace FinalProject
                     cmd.ExecuteNonQuery();
                     con.Close();
                     UpdateData();
-                   // Response.Write("<script>alert('Vlog Updated successfully');</script>");
+                   
                 }
                 catch (Exception ex)
                 {
@@ -243,7 +239,6 @@ namespace FinalProject
                 return false;
             }
         }
-
         void addNewVlog()
         {
             try

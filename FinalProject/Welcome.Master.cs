@@ -59,9 +59,6 @@ namespace FinalProject
                     LinkButton12.Visible = true; // Movie inventory link button
                     LinkButton11.Visible = false; // Admin Member Managment link button
                 }
-
-
-
             }
             catch (Exception)
             {
@@ -112,16 +109,11 @@ namespace FinalProject
             Session["fullname"] = "";
             Session["role"] = "";
 
-
             LinkButton1.Visible = true; // user login link button
             LinkButton2.Visible = true; // sign up link button
-
             LinkButton3.Visible = false; // logout link button
             LinkButton7.Visible = false; // hello user link button
-
             LinkButton6.Visible = true; // admin login link button
-
-
             LinkButton12.Visible = false; // Movie inventory link button
             LinkButton11.Visible = false; // Admin Member Managment link button
             Response.Redirect("HomePage.aspx");

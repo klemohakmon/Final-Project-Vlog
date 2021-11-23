@@ -18,18 +18,14 @@
 
        </script>
 
-
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-          
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">          
       
     <div class="wrapper">
     <div class="container">
 
         <div class="wraper">
-
-             
                     <center>
 <img src="https://i.pinimg.com/originals/0c/cd/96/0ccd96bc52dc46b1f5f3ea89cad58ecb.gif" class="img-fluid" alt="profile-image">
                     </center>
@@ -121,27 +117,14 @@
                             <asp:Label ID="label4" runat="server" Text='<%# Eval("category") %>'></asp:Label>
                      
                       </td>
-<%--                      <td>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button>
-                      </td>--%>
                     </tr>
-  
-
                   </tbody>
-              
-          
-
   </ItemTemplate>
 </asp:Repeater>
   </table>
   </div>
         </div>
     </div>
-
-
                             </div>
                         </div>
 
@@ -207,14 +190,6 @@
 
  <!-- end -->
 
-
-
-
-
-
-
-
-
                                 </div>
                             </div>
                             <!-- Personal-Information -->
@@ -238,12 +213,6 @@
 
                                                 <div class="col-xs-12 col-sm-6">
                                                
-
-<%--                                                <div class="videoWrapper">
-  <!-- Copy & Pasted from YouTube -->
-  <iframe width="560" height="349" src='<%# Eval("vlog_link")  %>' frameborder="0" allowfullscreen></iframe>
-</div>--%>
-
 
                                                     	<div class="box rte">
 		<h2 class="boxHeadline">  <asp:Label ID="Label2" runat="server" Text='<%# Eval("vlog_name") %>' ></asp:Label></h2>
@@ -337,13 +306,7 @@
 
                                         </div>
 
-
                                                                 <div class="row">
-
-                             <%--<div class="col-4">                                                     
-                                     <asp:Button class="button1"
-                                         ID="Button2" runat="server" Text="Add" OnClick="Button2_Click" />                                 
-                           </div>--%>
                              <div class="col-4">                                                     
                                      <asp:Button class="button2"
                                          ID="Button3" runat="server" Text="Update" OnClick="Button3_Click"/>                                 
@@ -351,24 +314,12 @@
                             <div class="col-4">                                                     
                                      <asp:Button class="button3"
                                          ID="Button8" runat="server" Text="Delete" OnClick="Button1_Click"/>                                 
-                           </div>
-                          
+                           </div>                        
                         </div>  
-
-                             
-                                  
-
                                 </div>
                             </div>
                                                  
                      </div>
-
-                        
-
-
-                        
-
-
                     </div>
                 </div>
             </div>
@@ -378,15 +329,4 @@
     </div>
     <!-- end wrapper -->
 </div>
-
-
-
-
-
-
-
-
-
-
-
 </asp:Content>

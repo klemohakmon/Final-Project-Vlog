@@ -61,25 +61,8 @@
                         <i class="fa fa-heart"></i>
                     </a>
                 </footer>
-<%--          <button class="btn card_btn">Read More</button>--%>
         </div>
       </div>
-
- <%--        <div style="text-align: center; width: inherit; height: 70px;">
-
- 
-             <br />
-                                                <span>Category:</span>
-            <asp:Label ID="label2" runat="server" Text='<%# Eval("category") %>'></asp:Label>
-                                                <br />
-                                                <span>Posted on:</span>
-  <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label>
-                                                <br />
-                                                <span>desc:</span>
-  <asp:Label ID="label4" runat="server" Text='<%# Eval("vlog_description") %>'></asp:Label>
-
-                                            </div>--%>
-
     </div>
 
   </ItemTemplate>

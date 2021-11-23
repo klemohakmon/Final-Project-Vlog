@@ -119,12 +119,6 @@
                             <asp:Label ID="label4" runat="server" Text='<%# Eval("category") %>'></asp:Label>
                      
                       </td>
-<%--                      <td>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
-                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button>
-                      </td>--%>
                     </tr>
   
 
@@ -242,10 +236,7 @@
                                                 <div class="col-xs-12 col-sm-6">
                                                
 
-<%--                                                <div class="videoWrapper">
-  <!-- Copy & Pasted from YouTube -->
-  <iframe width="560" height="349" src='<%# Eval("vlog_link")  %>' frameborder="0" allowfullscreen></iframe>
-</div>--%>
+
 
 
                                                     	<div class="box rte">

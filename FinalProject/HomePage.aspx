@@ -23,17 +23,6 @@
 		<div class="circle"></div>
 		<div class="circle"></div>
 
-<%--		<nav>
-			<h1 class="logo">s</h1>
-			<ul class="navigation">
-				<li><a href="#"></a></li>
-				<li><a href="#"> </a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-			</ul>
-		</nav>--%>
-
 		<div class="hero">
 			<h1>Wellcome	
 				To Our
@@ -59,8 +48,7 @@
 				
 			</div>
 			<div class="item">
-				<h4>YOU CAN BECOME FAMOUS</h4>
-				
+				<h4>YOU CAN BECOME FAMOUS</h4>			
 			</div>
 		</div>
 
@@ -85,20 +73,11 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="middle">
 			<p>
 				<span>At VLOG</span>
 				We welcome you to participate and take part in our site, upload content, watch interesting videos of people from all over the world all the time.
 		</div>
-
-<%--		<div class="videos">
-			<h3>Videos</h3>
-			<iframe width="620" height="290" src="https://www.youtube.com/embed/uCTWtDYEJxk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<iframe width="620" height="290" src="https://www.youtube.com/embed/e8JIs1jZfAU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>--%>
-	</main>
-
-  
+	</main>  
 </asp:Content>
 
