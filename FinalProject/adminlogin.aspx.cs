@@ -44,9 +44,6 @@ namespace FinalProject
                     {
                         Response.Write("<script>alert('Invalid credentials');</script>");
                     }
-
-                   
-
             }
             catch (Exception ex)
             {
