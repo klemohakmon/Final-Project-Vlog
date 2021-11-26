@@ -77,15 +77,11 @@
 
 </div>
 <div class ="form-group mb-4">
-<asp:TextBox ID="TextBox5" required= "true" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="Full Address" runat="server" ></asp:TextBox>
-
-</div>
-<div class ="form-group mb-4">
 <asp:TextBox ID="TextBox6" required= "true" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="City" runat="server" ></asp:TextBox>
 
 </div>
 <div class ="form-group mb-4">
-<asp:TextBox ID="TextBox7" required= "true" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="ZipCode" runat="server" ></asp:TextBox>
+<asp:TextBox ID="TextBox5" required= "true" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="Full Address" runat="server" ></asp:TextBox>
 
 </div>
 <div class ="form-group mb-4">

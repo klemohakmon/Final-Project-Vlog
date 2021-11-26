@@ -73,14 +73,14 @@ namespace FinalProject
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO members_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,role) values (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,'member') ", con);              
+                SqlCommand cmd = new SqlCommand("INSERT INTO members_tbl(full_name,dob,contact_no,email,state,city,full_address,member_id,password,role) values (@full_name,@dob,@contact_no,@email,@state,@city,@full_address,@member_id,@password,'member') ", con);              
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@contact_no", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@email", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@state", DropDownList1.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
-                cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
+              
                 cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@member_id", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());          
