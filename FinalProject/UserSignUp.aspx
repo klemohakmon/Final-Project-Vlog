@@ -37,7 +37,7 @@
 <div class="col-5 col-lg-7 mx-auto mb-5 mb-lg-0">
 
 <div class="pr-lg-5">
-<img src="https://cdn.dribbble.com/users/2939235/screenshots/9511690/media/7ce84c53895bc017b7687cbad26babe2.gif" alt="" class="img-fluid" />
+<img src="https://media.giphy.com/media/i4Gz4BuKa3NQU5FbhA/giphy.gif" alt="" class="img-fluid" />
 </div>
 </div>
 <div class="col-lg-5 px-lg-4">

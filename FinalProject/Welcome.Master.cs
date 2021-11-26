@@ -35,7 +35,7 @@ namespace FinalProject
                     LinkButton2.Visible = false; // sign up link button
                     LinkButton3.Visible = true; // logout link button
                     LinkButton7.Visible = true; // hello user link button
-                    LinkButton7.Text = "Hello" + Session["full_name"].ToString();
+                    LinkButton7.Text = "Hello" + " " +  Session["full_name"].ToString();
 
                     LinkButton6.Visible = false; // admin login link button
                     LinkButton5.Visible = true; // user vlog list link button
