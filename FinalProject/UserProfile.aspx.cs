@@ -92,7 +92,7 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("update members_tbl set full_name=@full_name, dob=@dob, contact_no=@contact_no, email=@email, state=@state, city=@city, pincode=@pincode, full_address=@full_address, password=@password where member_id='" + TextBox1.Text.Trim() + " and User_id=" + Session["User_id"], con);
+                SqlCommand cmd = new SqlCommand("update members_tbl set full_name=@full_name, dob=@dob, contact_no=@contact_no, email=@email, state=@state, city=@city, pincode=@pincode, full_address=@full_address, password=@password where User_id=" + Session["User_id"], con);
 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
@@ -108,7 +108,11 @@ namespace FinalProject
                 con.Close();
                 getUserData();
                 UpdateData();
-                Response.Write("<script>alert('Vlog Updated successfully');</script>");
+
+
+                Session["full_name"] = TextBox1.Text.Trim();
+               
+                Response.Write("<script>alert('Profile Updated successfully');</script>");
 
             }
             catch (Exception ex)

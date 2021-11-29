@@ -143,7 +143,6 @@
                     <div class="card-body">   
                         <div class="row text-center">
                             <div class="col">
-                                <h4>Member List</h4>
                             </div>
                         </div>
 
@@ -156,6 +155,7 @@
                         <div class="row">
   
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=Klemo-Hakmon\SQLEXPRESS;Initial Catalog=VlogDB;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [members_tbl]"></asp:SqlDataSource>                          
+                                <h4>Member List</h4>
                             <div class="col">
                                 <asp:GridView class="table table-striped table-bordered" ID="GridView1"  runat="server" AutoGenerateColumns="False" DataKeyNames="member_id" DataSourceID="SqlDataSource1">
                                     <Columns>
