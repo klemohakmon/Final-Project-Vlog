@@ -9,12 +9,33 @@
 }
 
 .share-btn-container {
-    background:#fff;
-    display: flex;
-    padding: 16px;
-   
-    
+    /* background: #fff;*/
+    padding: 10px;
 }
+.share-btn-container a i{
+    font-size: 28px;
+}
+.share-btn-container a {
+    margin: 12px 0;
+   transition: 500ms;
+   word-spacing: 16px;
+}
+.share-btn-container a:hover {
+    transform:scale(1.2);
+}
+    .share-btn-container .fa-facebook {
+        color: #1877f2;
+    }
+    .share-btn-container .fa-twitter {
+        color: #1da1f2;
+    }
+    .share-btn-container .fa-linkedin {
+        color: #0077b5;
+    }
+    .share-btn-container .fa-whatsapp {
+        color: #25d366;
+    }
+
 
 html {
     background-color: var(--white-alpha-25-color);
@@ -51,7 +72,7 @@ img {
 }
 
 .btn {
-    color: #ffffff;
+    color: black;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
@@ -105,7 +126,7 @@ img {
 }
 
 .card_title {
-    color: #ffffff;
+    color: black;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -114,7 +135,7 @@ img {
 }
 
 .card_text {
-    color: #ffffff;
+    color: black;
     font-size: 0.875rem;
     line-height: 1.7;
     margin-bottom: 1.0rem;

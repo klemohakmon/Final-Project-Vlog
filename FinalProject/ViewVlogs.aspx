@@ -44,9 +44,13 @@
           </h2>
 
                 <p class="text-grey-darker text-sm" style="text-align:right">
-                        <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label>
+                        <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload","{0: dd/MM/yyyy}") %>'></asp:Label>
                     </p>
                  </header>
+             <button class="btn card_btn">
+                        <span class="hidden">Like</span>
+                        <i class="fa fa-heart"></i>
+                    </a>
             <div class="share-btn-container">
               <a href="#">
                 <i class="fab fa-facebook"></i>
@@ -69,10 +73,7 @@
                           <asp:Label ID="label2" runat="server" Text='<%# Eval("vlog_description") %>'></asp:Label>
                         </p>
                     </a>
-                    <button class="btn card_btn">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
+                   
                 </footer>
         </div>
       </div>

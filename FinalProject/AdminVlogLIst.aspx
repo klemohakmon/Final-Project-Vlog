@@ -105,7 +105,7 @@
          
                       </td>
                       <td>
-                          <span class="text-muted">    <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label></span><br>
+                          <span class="text-muted">    <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload","{0: dd/MM/yyyy}") %>'></asp:Label></span><br>
 
                       </td>
                       <td>
