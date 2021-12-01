@@ -47,7 +47,20 @@
                         <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload") %>'></asp:Label>
                     </p>
                  </header>
-
+            <div class="share-btn-container">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+              <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+            </a>
+                </div>
             <footer class="flex items-center justify-between leading-none p-2 md:p-4">
                     <a class="flex items-center no-underline hover:underline text-black"
                         >
