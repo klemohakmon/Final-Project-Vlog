@@ -90,16 +90,10 @@
 </div>
 <div class ="form-group mb-4">
 <asp:TextBox ID="TextBox9" required= "true" TextMode="Password" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="Password" runat="server" ></asp:TextBox>
-
 </div>
 <asp:Button Text="Sign up" CssClass="btn btn-primary" Height="50px" Width="430px" runat="server" OnClick="Button1_Click" />
 </div>
 </div>
-
 </div>
-
 </div>
-    
-
-<a href="HomePage.aspx"><< Back To Home</a>
 </asp:Content>
