@@ -19,7 +19,7 @@
 </div>
 </div>
 <div class="col-lg-5 px-lg-4">
-<h1 class="text-base text-primary text-uppercase mb-4">Login Here</h1>
+
 <h2 class="mb-4">Welcome Back!</h2>
 
 <div class ="form-group mb-4">
