@@ -87,7 +87,7 @@ namespace FinalProject
                 cmd.ExecuteNonQuery();
                 con.Close();
                
-                Response.Write("<script>alert('Sign Up Successful. Go to User Login To Login');window.location='UserLogin.aspx';</script>"); 
+               //Response.Write("<script>alert('Sign Up Successful. Go to User Login To Login');window.location='UserLogin.aspx';</script>"); 
             }
             catch (Exception ex)
             {

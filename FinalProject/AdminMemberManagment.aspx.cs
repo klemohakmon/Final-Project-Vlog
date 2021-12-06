@@ -15,21 +15,24 @@ namespace FinalProject
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataBind();
+          
+                GridView1.DataBind();
+            
         }
-        // go button member id 
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             getMemberByID();
         }
 
-        // user defind function
-        
-        
-        // Delete user Account
         protected void Button1_Click(object sender, EventArgs e)
         {
-            DeleteMemberAccount();
+
+                DeleteMemberAccount();
+                String strScript = "window.onload = function() { Message();};";
+                ClientScript.RegisterStartupScript(this.GetType(), "Message", strScript, true);
+
+
+                       
         }
 
         bool checkIfMemberExists()
@@ -75,7 +78,7 @@ namespace FinalProject
                     SqlCommand cmd = new SqlCommand("DELETE from members_tbl where member_id ='" + TextBox1.Text.Trim() + "'", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    Response.Write("<script>alert('User Account Delete Succesfully');</script>");
+                    
                     clearForm();
                     GridView1.DataBind();
                 }
@@ -110,7 +113,7 @@ namespace FinalProject
                         TextBox4.Text = dr.GetValue(3).ToString();
                         TextBox6.Text = dr.GetValue(4).ToString();
                         TextBox9.Text = dr.GetValue(5).ToString();
-                        TextBox7.Text = dr.GetValue(6).ToString();
+
                         TextBox5.Text = dr.GetValue(7).ToString();
                     }
                 }
@@ -133,7 +136,7 @@ namespace FinalProject
             TextBox4.Text = "";
             TextBox6.Text = "";
             TextBox9.Text = "";
-            TextBox7.Text = "";
+
             TextBox5.Text = "";
         }
     }
