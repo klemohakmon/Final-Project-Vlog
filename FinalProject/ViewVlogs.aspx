@@ -47,38 +47,37 @@
                         <asp:Label ID="label3" runat="server" Text='<%# Eval("vlog_date_upload","{0: dd/MM/yyyy}") %>'></asp:Label>
                     </p>
                  </header>
-             <button class="btn card_btn">
+            <%-- <button class="btn card_btn">
                         <span class="hidden">Like</span>
                         <i class="fa fa-heart"></i>
-                    </a>
-            <div class="share-btn-container">
-              <a href="#">
-                <i class="fab fa-facebook"></i>
-            </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-            </a>
-              <a href="#">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-              <a href="#">
-                <i class="fab fa-linkedin"></i>
-            </a>
-                </div>
+                    </a>--%>
+            
             <footer class="flex items-center justify-between leading-none p-2 md:p-4">
                     <a class="flex items-center no-underline hover:underline text-black"
                         >
                         <p class="ml-2 text-sm">
-
+                            <h5>Description:</h5>
                           <asp:Label ID="label2" runat="server" Text='<%# Eval("vlog_description") %>'></asp:Label>
                         </p>
                     </a>
-                   
                 </footer>
+            <div class="share-btn-container">
+              <a href="https://he-il.facebook.com/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+              <a href="https://web.whatsapp.com/" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+              <a href="https://www.linkedin.com/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+                </div>
         </div>
       </div>
     </div>
-
   </ItemTemplate>
 </asp:Repeater>
            </div>
