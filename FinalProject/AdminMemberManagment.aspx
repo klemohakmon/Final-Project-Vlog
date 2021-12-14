@@ -54,7 +54,6 @@
         <div class="col-lg">
             <ul class="nav nav-tabs" id="myTab">
                 <li class="active nav-link"><a href="#home" data-toggle="tab">Home</a></li>
-                <li class="active nav-link"><a href="#messages" data-toggle="tab">Messages</a></li>
                 <li class="active nav-link"><a href="#settings" data-toggle="tab">Settings</a></li>
             </ul>
 
@@ -77,25 +76,6 @@
                     </div>
 
                 </div>
-
-
-
-                <div class="tab-pane" id="messages">
-
-                    <ul class="list-group">
-                        <li class="list-group-item text-muted">Inbox</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.13.21</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.202315414</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.2024414</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.2014</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.3</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.2</li>
-                        <li class="list-group-item text-right"><a href="#" class="pull-left">test</a> 2.11.2</li>
-
-                    </ul>
-
-                </div>
                <i></i>&nbsp;&nbsp;<i></i>
                 <div class="tab-pane" id="settings">
 
@@ -108,8 +88,7 @@
            </div>
   </div>
   <div class="col-6 col-md-4"> 
-      <asp:TextBox CssClass="form-control" ID="TextBox2" 
-                                        runat="server" placeholder="Full Name" ReadOnly="True"></asp:TextBox></div>
+      <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Full Name" ReadOnly="True"></asp:TextBox></div>
 </div>
 
 <i></i>&nbsp;&nbsp;<i></i>

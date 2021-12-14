@@ -263,7 +263,7 @@ namespace FinalProject
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from vlog_upload", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from vlog_upload",con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

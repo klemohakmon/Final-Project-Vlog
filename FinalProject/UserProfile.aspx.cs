@@ -112,7 +112,7 @@ namespace FinalProject
 
                 Session["full_name"] = TextBox1.Text.Trim();
                
-                Response.Write("<script>alert('Profile Updated successfully');</script>");
+                Response.Write("<script>alert('Profile details updated successfully');</script>");
 
             }
             catch (Exception ex)

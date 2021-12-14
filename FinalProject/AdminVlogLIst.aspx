@@ -218,7 +218,7 @@
 		<h2 class="boxHeadline">  <asp:Label ID="Label2" runat="server" Text='<%# Eval("vlog_name") %>' ></asp:Label></h2>
 		<h3 class="boxHeadlineSub"><asp:Label ID="Label3" runat="server" Text='<%# Eval("vlog_date_upload", "{0: dd/MM/yyyy}") %>'></asp:Label></h3>
 <div class="videoWrapper">
-		<iframe width=100 height="281" src='<%# Eval("vlog_link")  %>' frameborder="0" allowfullscreen></iframe>
+		<iframe width=100 height="281" src='<%# Eval("vlog_link")  %>' frameborder="0" type="video/mp4"></iframe>
     </div>
 	</div>
                 
