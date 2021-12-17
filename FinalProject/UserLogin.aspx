@@ -29,8 +29,14 @@
 
 <div class ="form-group mb-4">
 <asp:TextBox ID="TextBox2" required= "true" TextMode="Password" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="Password" runat="server" ></asp:TextBox>
-
-</div>
+    <div class="form-group mb-4">
+    <tr>
+        <td><a href="#" onclick="window.open('ForgetPassword.aspx','FP','width=500,height=50,top=300,left=500,fullscreen=no,resizable=0');">Forget Password?</a></td>
+     <%-- <td>
+          <asp:Button ID="ButLogin" runat="server" Text="Login" OnClick="ButLogin_Click"/></td>  --%>   
+    </tr>
+        </div>
+    </div>
 <div class="form-group mb-4">
 <div class="custom-control custom-checkbox">
 <asp:CheckBox Text="&nbsp&nbsp&nbspRemember Me" runat="server" />

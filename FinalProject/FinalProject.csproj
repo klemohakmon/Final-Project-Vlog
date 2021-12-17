@@ -1744,6 +1744,7 @@
     <Content Include="FontAwesome\webfonts\fa-brands-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.svg" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="images\Admin pic.png" />
     <Content Include="images\admin.jpg" />
@@ -1788,6 +1789,13 @@
     </Compile>
     <Compile Include="AdminVlogLIst.aspx.designer.cs">
       <DependentUpon>AdminVlogLIst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
