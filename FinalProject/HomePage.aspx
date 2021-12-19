@@ -1,4 +1,4 @@
-﻿S<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="FinalProject.HomePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Welcome.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="FinalProject.HomePage" %>
 
 
 
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 
-		<div class="highlights">
+		<%--<div class="highlights">
 			<h3>another test</h3>
 			<div class="item">
 				<div class="info">
@@ -72,11 +72,11 @@
 					<p>test</p>
 				</div>
 			</div>
-		</div>
+		</div>--%>
 		<div class="middle">
 			<p>
-				<span>At VLOG</span>
-				We welcome you to participate and take part in our site, upload content, watch interesting videos of people from all over the world all the time.
+				<span>At VLOGS</span>
+				We welcome you to participate and take part in our site, upload content, watch interesting videos of people from all over the world 24/7.
 		</div>
 	</main>  
 </asp:Content>
