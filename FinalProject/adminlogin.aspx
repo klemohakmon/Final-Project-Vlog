@@ -16,7 +16,7 @@
 </div>
 </div>
 <div class="col-lg-5 px-lg-4">
-<h1 class="text-base text-primary text-uppercase mb-4">Admin Login</h1>
+<%--<h1 class="text-base text-primary text-uppercase mb-4">Admin Login</h1>--%>
 <h2 class="mb-4">Welcome Back Admin</h2>
 
 <div class ="form-group mb-4">
@@ -27,11 +27,6 @@
 <div class ="form-group mb-4">
 <asp:TextBox ID="TextBox2" required= "true" TextMode="Password" CssClass="form-control border-0 shadow form-control-lg text-base" placeholder="Password" runat="server" ></asp:TextBox>
 
-</div>
-<div class="form-group mb-4">
-<div class="custom-control custom-checkbox">
-<asp:CheckBox Text="&nbsp&nbsp&nbspRemember Me" runat="server" />
-</div>
 </div>
 <asp:Button Text="LOGIN" CssClass="btn btn-primary" Height="50px" Width="400px" runat="server" OnClick="Button1_Click"/>
 </div>
