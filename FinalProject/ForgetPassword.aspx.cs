@@ -26,7 +26,7 @@ namespace FinalProject
             string mainconn = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             string sqlquery = "SELECT email,password from members_tbl where email=@email";
-            SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
+            SqlCommand sqlcomm = new SqlCommand(sqlquery,sqlconn);
             sqlcomm.Parameters.AddWithValue("@email", TxtEmail.Text);
             sqlconn.Open();
             SqlDataReader sdr = sqlcomm.ExecuteReader();
@@ -39,7 +39,7 @@ namespace FinalProject
                 mm.Body = string.Format("Hello : <h1>{0}</hr> is your email <br/> your password is <h1>(1)</h1>", full_name, password);
                 mm.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp,gmail.com";
+                smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 NetworkCredential nc = new NetworkCredential();
                 nc.UserName = "klemohakmon@gmail.com";
