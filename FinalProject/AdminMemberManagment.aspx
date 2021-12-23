@@ -41,7 +41,8 @@
    
 
                                 <center>
-<img src="https://cdn.dribbble.com/users/21663/screenshots/2958895/management.gif" class="img-fluid" alt="img-circle img-responsive" >
+                                    <img src="https://i.pinimg.com/originals/b6/6e/8f/b66e8ffa547746f4085ecc197cd588b9.gif" height ="300">
+<%--<img src="https://cdn.dribbble.com/users/21663/screenshots/2958895/management.gif" class="img-fluid" alt="img-circle img-responsive" >--%>
                     </center>
 
 
